@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto — SWILAN CUÉNOD</title>
+  <meta name="description" content="Entre em contacto com a SWILAN CUÉNOD. Visitas disponíveis todos os dias. Resposta em menos de 2 horas."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .contact-page { padding: 9rem 2rem 5rem; }
+    #form-msg { display:none; margin-top:1rem; font-size:.85rem; }
+  </style>
+</head>
+<body data-page="contacto">
+
+  <nav id="nav"></nav>
+
+  <a id="wa-float" href="#" aria-label="WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.526 5.845L.057 23.886l6.187-1.452A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 01-5.007-1.372l-.36-.213-3.672.862.877-3.581-.234-.369A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+  </a>
+
+  <div class="contact-page">
+    <div class="section-inner" style="max-width:1000px;">
+      <div class="contact-grid">
+
+        <!-- Info -->
+        <div class="contact-info reveal">
+          <span style="font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.75rem;" data-i18n="contactoTag"></span>
+          <h2 data-i18n="contactoTitle"></h2>
+          <p style="font-size:.85rem;opacity:.65;margin:1rem 0 2rem;" data-i18n="contactoSub"></p>
+
+          <div class="contact-item">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <div>
+              <div class="label">Email</div>
+              <div class="val">geral@swilancuenod.pt</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <div>
+              <div class="label">Sede</div>
+              <div class="val">Avenidas Novas, Lisboa, Portugal</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <div>
+              <div class="label">NIF</div>
+              <div class="val">518637891</div>
+            </div>
+          </div>
+
+          <!-- WhatsApp direto -->
+          <div style="margin-top:2rem;">
+            <p style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:1rem;" data-i18n="waDirecto"></p>
+            <a id="wa-cta" href="#" target="_blank" rel="noopener"
+              style="display:inline-flex;align-items:center;gap:.75rem;background:#25D366;color:#fff;padding:.85rem 1.8rem;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;">
+              <svg width="18" height="18" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.526 5.845L.057 23.886l6.187-1.452A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 01-5.007-1.372l-.36-.213-3.672.862.877-3.581-.234-.369A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulário -->
+        <div class="reveal" style="transition-delay:.15s;">
+          <form id="contact-form" novalidate style="display:flex;flex-direction:column;gap:.85rem;">
+            <input type="text"   name="nome"       placeholder="" data-ph="formNome"     class="form-input" required/>
+            <input type="email"  name="email"      placeholder="" data-ph="formEmail"    class="form-input" required/>
+            <input type="tel"    name="telefone"   placeholder="" data-ph="formTelefone" class="form-input"/>
+            <select name="interesse" class="form-input" style="cursor:pointer;appearance:none;">
+              <option value="" data-i18n="formInteresse"></option>
+              <option data-i18n="formInteresse1"></option>
+              <option data-i18n="formInteresse2"></option>
+              <option data-i18n="formInteresse3"></option>
+              <option data-i18n="formInteresse4"></option>
+            </select>
+            <textarea name="mensagem" rows="4" placeholder="" data-ph="formMensagem" class="form-input" style="resize:none;"></textarea>
+            <button type="submit" class="btn btn-gold" data-i18n="formEnviar" style="width:100%;padding:1rem;font-size:.8rem;"></button>
+            <div id="form-msg"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // i18n static elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = t(key);
+        if (val) el.textContent = val;
+      });
+      // Placeholders
+      document.querySelectorAll('[data-ph]').forEach(el => {
+        el.placeholder = t(el.getAttribute('data-ph'));
+      });
+      // WhatsApp
+      const waMsg = encodeURIComponent(t('waMsg'));
+      document.getElementById('wa-cta').href = `https://wa.me/${CONFIG.whatsapp}?text=${waMsg}`;
+    });
+  </script>
+</body>
+</html>
