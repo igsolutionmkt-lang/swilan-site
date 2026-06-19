@@ -3,72 +3,85 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Imóveis — SWILAN CUÉNOD</title>
-  <meta name="description" content="Portfólio de imóveis SWILAN CUÉNOD. Penthouse T3 Setúbal 950.000 €. T2 Gaia a partir de 600.000 €. Venda direta."/>
+  <title>Portfólio · Imóveis Premium em Setúbal, Gaia/Foz e Algarve | SWILAN CUÉNOD</title>
+  <meta name="description" content="Portfólio privado: T3 pronto em Setúbal, dois T2 em Gaia/Foz com entrega final 2026 e T1 lifestyle em Quarteira. Dossier privado mediante pedido."/>
   <meta property="og:type"  content="website"/>
   <meta property="og:url"   content="https://igsolutionmkt-lang.github.io/swilan-site/imoveis.html"/>
-  <meta property="og:image" content="https://igsolutionmkt-lang.github.io/swilan-site/assets/hero.jpg"/>
+  <meta property="og:title" content="Portfólio Privado | SWILAN CUÉNOD"/>
+  <meta property="og:image" content="https://igsolutionmkt-lang.github.io/swilan-site/assets/setubal.jpg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
   <style>
-    .page-header {
-      background: var(--navy);
-      padding: 9rem 2rem 4rem;
-      text-align: center;
-    }
-    .page-header .tag { display:block; font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:.75rem; }
-    .page-header h1 { font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:clamp(2rem,5vw,4rem); font-weight:300; }
-    .page-header .gold-line { margin-top:1.2rem; }
+    .port-head { padding: 9rem 2rem 3rem; text-align:center; background:var(--navy); }
+    .port-head .eyebrow { color:var(--gold); }
+    .port-head h1 { font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:clamp(2.2rem,5vw,3.8rem); font-weight:300; }
+    .port-head p { color:rgba(247,243,236,.6); font-size:.95rem; margin-top:1rem; max-width:560px; margin-left:auto; margin-right:auto; }
+    .filters { display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center; padding:2.5rem 1.5rem 0; }
+    .filter-btn { background:transparent; border:1px solid var(--line); color:var(--navy); font-family:'Jost',sans-serif; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; padding:.6rem 1.2rem; cursor:pointer; transition:all .2s; }
+    .filter-btn:hover { border-color:var(--gold); color:var(--gold); }
+    .filter-btn.active { background:var(--navy); color:var(--cream); border-color:var(--navy); }
   </style>
 </head>
 <body data-page="imoveis">
-
   <nav id="nav"></nav>
-
-  <a id="wa-float" href="#" aria-label="WhatsApp" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.526 5.845L.057 23.886l6.187-1.452A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 01-5.007-1.372l-.36-.213-3.672.862.877-3.581-.234-.369A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+  <a id="wa-float" href="#" aria-label="WhatsApp" target="_blank" rel="noopener" style="position:fixed;bottom:24px;right:24px;z-index:9998;background:#25D366;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.4);">
+    <svg width="26" height="26" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.526 5.845L.057 23.886l6.187-1.452A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 01-5.007-1.372l-.36-.213-3.672.862.877-3.581-.234-.369A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
   </a>
 
-  <div class="page-header">
-    <span class="tag" data-i18n="imoveisTag"></span>
-    <h1 data-i18n="imoveisTitle" style="white-space:pre-line"></h1>
-    <span class="gold-line"></span>
+  <div class="port-head">
+    <span class="eyebrow">Portfólio privado</span>
+    <h1>Imóveis selecionados</h1>
+    <p>Quatro imóveis. Três momentos de oportunidade — em Setúbal, Gaia/Foz e Algarve.</p>
   </div>
 
-  <section class="section">
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-type="all"        data-val="">Todos</button>
+    <button class="filter-btn" data-type="estado" data-val="pronto">Pronto para venda</button>
+    <button class="filter-btn" data-type="estado" data-val="construcao">Entrega final 2026</button>
+    <button class="filter-btn" data-type="regiao" data-val="Setúbal">Setúbal</button>
+    <button class="filter-btn" data-type="regiao" data-val="Gaia/Foz">Gaia/Foz</button>
+    <button class="filter-btn" data-type="regiao" data-val="Algarve">Algarve</button>
+  </div>
+
+  <section class="section" style="padding-top:2.5rem;">
     <div class="section-inner">
-      <div id="cards-imoveis" class="cards-grid"></div>
+      <div id="cards-imoveis" class="portfolio-grid"></div>
     </div>
   </section>
 
-  <!-- CTA venda direta -->
+  <!-- CTA -->
   <section class="section section--dark">
-    <div class="section-inner" style="max-width:700px;text-align:center;">
-      <div class="reveal">
-        <span class="tag" style="display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;" data-i18n="porqueTag"></span>
-        <h2 style="font-size:clamp(1.8rem,3.5vw,3rem);color:var(--cream);" data-i18n="porqueTitle"></h2>
-        <span class="gold-line" style="margin-top:1.2rem;"></span>
-        <p style="color:rgba(247,243,236,.65);font-size:.9rem;margin-top:1.5rem;line-height:1.8;" data-i18n="p1Text"></p>
-        <a href="contacto.html" class="btn btn-gold" style="margin-top:2rem;" data-i18n="navContacto"></a>
+    <div class="cta-final reveal">
+      <span class="eyebrow">Acesso privado</span>
+      <h2 style="color:var(--cream);">Receba o dossier do imóvel que lhe interessa</h2>
+      <p style="color:rgba(247,243,236,.7);">Plantas, áreas, características e documentação disponível, mediante pedido a compradores qualificados.</p>
+      <div class="btn-row center">
+        <a href="contacto.html" class="btn btn-gold">Receber dossier</a>
+        <a href="contacto.html" class="btn btn-ghost">Agendar visita privada</a>
       </div>
     </div>
   </section>
 
   <footer id="footer"></footer>
-
   <script src="js/config.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/site.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        const val = t(key);
-        if (val) el.textContent = val;
+      const filters = document.getElementById('filters');
+      filters.addEventListener('click', e => {
+        const btn = e.target.closest('.filter-btn');
+        if (!btn) return;
+        filters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const type = btn.dataset.type, val = btn.dataset.val;
+        document.querySelectorAll('#cards-imoveis .pcard').forEach(card => {
+          const show = type === 'all' || card.dataset[type] === val;
+          card.style.display = show ? '' : 'none';
+        });
       });
-      document.querySelectorAll('[href="contacto.html"]').forEach(a => a.href = pageUrl('contacto.html'));
     });
   </script>
 </body>

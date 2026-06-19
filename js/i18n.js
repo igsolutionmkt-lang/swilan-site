@@ -13,6 +13,7 @@ const I18N = {
     navSetubal:  "Setúbal",
     navGaia:     "Gaia/Foz",
     navAlgarve:  "Algarve",
+    navSobre:    "Sobre",
     navProcesso: "Processo",
     navContacto: "Contacto",
     navWa:       "Falar no WhatsApp",

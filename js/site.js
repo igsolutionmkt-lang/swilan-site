@@ -33,6 +33,8 @@ function renderNav(activePage) {
       <a href="${pageUrl('setubal.html')}"  ${A('setubal')}>${t('navSetubal')}</a>
       <a href="${pageUrl('gaia.html')}"     ${A('gaia')}>${t('navGaia')}</a>
       <a href="${pageUrl('quarteira.html')}" ${A('quarteira')}>${t('navAlgarve')}</a>
+      <a href="${pageUrl('sobre.html')}"    ${A('sobre')}>${t('navSobre')}</a>
+      <a href="${pageUrl('processo.html')}" ${A('processo')}>${t('navProcesso')}</a>
       <a href="${pageUrl('contacto.html')}" ${A('contacto')}>${t('navContacto')}</a>
     </nav>
     <div id="nav-right">
