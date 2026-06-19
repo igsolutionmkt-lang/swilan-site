@@ -100,7 +100,7 @@ const CONFIG = {
       area:       "57 m²",
       quartos:    "1",
       wc:         "1",
-      certif:     "A",
+      certif:     "E",
       entrega:    "Imediata",
       dossier:    true,
       url:        "quarteira.html",

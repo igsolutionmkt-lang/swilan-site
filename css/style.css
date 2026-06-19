@@ -63,8 +63,8 @@ img { display: block; max-width: 100%; }
 .btn-wa-nav:hover { opacity: .85; }
 #nav-hamburger { display: none; background: none; border: none; cursor: pointer; color: var(--cream); }
 
-/* Mobile nav */
-@media (max-width: 768px) {
+/* Mobile / tablet nav (8 itens → hamburger até 1024px para evitar overflow) */
+@media (max-width: 1024px) {
   #nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: var(--navy); padding: 1.5rem 2rem; gap: 1.2rem; border-bottom: 1px solid rgba(190,159,98,.2); }
   #nav-links.open { display: flex; }
   #nav-hamburger { display: block; }
