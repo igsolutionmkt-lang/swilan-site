@@ -39,6 +39,16 @@
     .form-input-dark{width:100%;padding:.8rem 1rem;border:1px solid rgba(190,159,98,.25);background:rgba(255,255,255,.06);font-family:'Jost',sans-serif;font-size:.9rem;color:var(--cream);outline:none;}
     .form-input-dark:focus{border-color:var(--gold);}.form-input-dark::placeholder{color:rgba(247,243,236,.35);}
     .form-input-dark option{background:var(--navy);color:var(--cream);}
+    .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;}
+    @media(min-width:768px){.gallery-grid{grid-template-columns:repeat(4,1fr);}}
+    .gallery-grid img{width:100%;height:200px;object-fit:cover;cursor:pointer;transition:transform .3s;}
+    .gallery-grid img:hover{transform:scale(1.03);}
+    #lightbox{display:none;position:fixed;inset:0;z-index:10000;background:rgba(14,28,43,.96);align-items:center;justify-content:center;}
+    #lightbox.open{display:flex;}
+    #lightbox img{max-width:92vw;max-height:88vh;object-fit:contain;border:1px solid rgba(190,159,98,.3);}
+    #lightbox-close{position:absolute;top:20px;right:24px;color:var(--gold);font-size:2rem;cursor:pointer;}
+    #lightbox-prev,#lightbox-next{position:absolute;top:50%;transform:translateY(-50%);color:var(--gold);font-size:2rem;cursor:pointer;padding:0 16px;background:rgba(14,28,43,.6);}
+    #lightbox-prev{left:8px;}#lightbox-next{right:8px;}
   </style>
 </head>
 <body data-page="gaia">
@@ -131,6 +141,37 @@
     </div>
   </section>
 
+  <!-- GALERIA -->
+  <section id="galeria" style="background:var(--navy);padding:5rem 1.5rem;border-top:1px solid rgba(190,159,98,.12);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-title reveal" style="text-align:center;">
+        <span class="eyebrow">Galeria</span>
+        <h2 style="color:var(--cream);">Imagens do empreendimento</h2>
+        <span class="gold-line"></span>
+        <p style="color:rgba(247,243,236,.5);font-size:.82rem;margin-top:1rem;">Imagens ilustrativas · sujeitas a confirmação documental · clique para ampliar</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <img src="assets/gaia-gal-01.jpg" alt="Render Gaia/Foz — 1" loading="lazy" data-idx="0"/>
+        <img src="assets/gaia-gal-02.jpg" alt="Render Gaia/Foz — 2" loading="lazy" data-idx="1"/>
+        <img src="assets/gaia-gal-03.jpg" alt="Render Gaia/Foz — 3" loading="lazy" data-idx="2"/>
+        <img src="assets/gaia-gal-04.jpg" alt="Render Gaia/Foz — 4" loading="lazy" data-idx="3"/>
+        <img src="assets/gaia-gal-05.jpg" alt="Render Gaia/Foz — 5" loading="lazy" data-idx="4"/>
+        <img src="assets/gaia-gal-06.jpg" alt="Render Gaia/Foz — 6" loading="lazy" data-idx="5"/>
+        <img src="assets/gaia-gal-07.jpg" alt="Render Gaia/Foz — 7" loading="lazy" data-idx="6"/>
+        <img src="assets/gaia-gal-08.jpg" alt="Render Gaia/Foz — 8" loading="lazy" data-idx="7"/>
+        <img src="assets/gaia-gal-09.jpg" alt="Render Gaia/Foz — 9" loading="lazy" data-idx="8"/>
+        <img src="assets/gaia-gal-10.jpg" alt="Render Gaia/Foz — 10" loading="lazy" data-idx="9"/>
+        <img src="assets/gaia-gal-11.jpg" alt="Render Gaia/Foz — 11" loading="lazy" data-idx="10"/>
+        <img src="assets/gaia-gal-12.jpg" alt="Render Gaia/Foz — 12" loading="lazy" data-idx="11"/>
+      </div>
+    </div>
+  </section>
+
+  <div id="lightbox" role="dialog" aria-modal="true">
+    <span id="lightbox-close">✕</span><span id="lightbox-prev">‹</span>
+    <img id="lightbox-img" src="" alt=""/><span id="lightbox-next">›</span>
+  </div>
+
   <!-- LISTA PRIVADA -->
   <section style="background:var(--navy);padding:5rem 1.5rem;border-top:1px solid rgba(190,159,98,.15);">
     <div style="max-width:640px;margin:0 auto;">
@@ -178,6 +219,16 @@
   document.addEventListener('DOMContentLoaded', () => {
     const u = waUrl("Olá, tenho interesse nas frações T2 em Gaia/Foz (Canidelo), com entrega prevista para final de 2026. Gostaria de receber o dossier.");
     ['hero-wa','form-wa','wa-float','wa-c','wa-d'].forEach(id => { const el=document.getElementById(id); if(el) el.href=u; });
+    const imgs = Array.from(document.querySelectorAll('.gallery-grid img')).map(i=>i.src);
+    let cur=0; const lb=document.getElementById('lightbox'), li=document.getElementById('lightbox-img');
+    function op(i){cur=i;li.src=imgs[i];lb.classList.add('open');document.body.style.overflow='hidden';}
+    function cl(){lb.classList.remove('open');document.body.style.overflow='';}
+    document.querySelectorAll('.gallery-grid img').forEach(im=>im.addEventListener('click',()=>op(+im.dataset.idx)));
+    if(lb){document.getElementById('lightbox-close').addEventListener('click',cl);
+    document.getElementById('lightbox-prev').addEventListener('click',()=>op((cur-1+imgs.length)%imgs.length));
+    document.getElementById('lightbox-next').addEventListener('click',()=>op((cur+1)%imgs.length));
+    lb.addEventListener('click',e=>{if(e.target===lb)cl();});
+    document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')cl();if(e.key==='ArrowLeft')op((cur-1+imgs.length)%imgs.length);if(e.key==='ArrowRight')op((cur+1)%imgs.length);});}
   });
   </script>
 </body>
