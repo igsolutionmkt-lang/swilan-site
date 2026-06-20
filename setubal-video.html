@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vídeo · Penthouse T3 em Setúbal | SWILAN CUÉNOD</title>
+  <meta name="description" content="Vídeo ilustrativo da Penthouse T3 nova a estrear em Setúbal — terraço privativo, vista panorâmica e condomínio premium."/>
+  <meta property="og:image" content="https://igsolutionmkt-lang.github.io/swilan-site/assets/setubal.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#0E1C2B;--gold:#BE9F62;--cream:#F7F3EC;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html,body{height:100%;background:#000;font-family:'Jost',sans-serif;overflow:hidden;}
+    #stage{position:fixed;inset:0;background:#000;overflow:hidden;}
+    .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;will-change:opacity;}
+    .slide.on{opacity:1;}
+    .slide img{width:100%;height:100%;object-fit:cover;animation:kb 5s ease-out forwards;}
+    .slide.on img{animation:kb 5s ease-out forwards;}
+    @keyframes kb{from{transform:scale(1.12) translate(2%,1%);}to{transform:scale(1) translate(0,0);}}
+    .vignette{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.55) 100%),linear-gradient(to bottom,rgba(0,0,0,.35) 0%,transparent 25%,transparent 60%,rgba(0,0,0,.65) 100%);}
+    /* Caption */
+    #cap{position:absolute;left:0;right:0;bottom:14%;text-align:center;z-index:5;padding:0 1.5rem;}
+    #cap .eb{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);opacity:0;transition:opacity .8s ease;}
+    #cap h2{font-family:'Cormorant Garamond',serif;font-weight:300;color:#fff;font-size:clamp(1.8rem,4.6vw,3.4rem);line-height:1.1;margin-top:.5rem;opacity:0;transform:translateY(14px);transition:opacity .9s ease,transform .9s ease;text-shadow:0 2px 24px rgba(0,0,0,.5);}
+    #cap.show .eb{opacity:1;}
+    #cap.show h2{opacity:1;transform:translateY(0);}
+    /* Brand bar */
+    #brand{position:absolute;top:26px;left:0;right:0;text-align:center;z-index:6;}
+    #brand .n{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.1rem;letter-spacing:.28em;text-transform:uppercase;}
+    /* Progress */
+    #bar{position:absolute;top:0;left:0;height:3px;background:var(--gold);width:0;z-index:7;transition:width .2s linear;}
+    /* Controls */
+    #ui{position:absolute;bottom:26px;left:0;right:0;display:flex;gap:1rem;justify-content:center;align-items:center;z-index:8;}
+    .btn{font-family:'Jost',sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:.7rem 1.5rem;cursor:pointer;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.25);color:#fff;backdrop-filter:blur(4px);}
+    .btn.gold{background:var(--gold);color:var(--navy);border-color:var(--gold);}
+    .btn:hover{border-color:var(--gold);color:var(--gold);}
+    .btn.gold:hover{color:var(--navy);opacity:.9;}
+    /* Start / End overlays */
+    .overlay{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:rgba(14,28,43,.82);backdrop-filter:blur(6px);padding:2rem;transition:opacity .6s ease;}
+    .overlay.hide{opacity:0;pointer-events:none;}
+    .overlay .eb{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+    .overlay h1{font-family:'Cormorant Garamond',serif;font-weight:300;color:#fff;font-size:clamp(2rem,5vw,3.6rem);line-height:1.1;margin-bottom:.6rem;}
+    .overlay p{color:rgba(247,243,236,.75);font-size:.95rem;margin-bottom:2rem;max-width:520px;}
+    .overlay .row{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;}
+    .play{width:74px;height:74px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;}
+    .play svg{width:26px;height:26px;fill:var(--gold);margin-left:4px;}
+  </style>
+</head>
+<body>
+  <div id="stage">
+    <div id="bar"></div>
+    <div id="brand"><div class="n">SWILAN CUÉNOD</div></div>
+    <div class="vignette"></div>
+    <div id="cap"><div class="eb" id="cap-eb"></div><h2 id="cap-t"></h2></div>
+    <div id="ui">
+      <button class="btn" id="toggle">Pausar</button>
+      <a class="btn gold" id="wa" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+
+    <!-- START -->
+    <div class="overlay" id="start">
+      <div class="play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="eb">Setúbal · Penthouse · Nova a estrear</div>
+      <h1>Penthouse T3 com<br/>terraço privativo</h1>
+      <p>Um vídeo ilustrativo da penthouse — terraço panorâmico, interiores e condomínio premium.</p>
+      <div class="row"><button class="btn gold" id="play-btn">▶ Iniciar vídeo</button></div>
+    </div>
+
+    <!-- END -->
+    <div class="overlay hide" id="end">
+      <div class="eb">SWILAN CUÉNOD · Dossier privado</div>
+      <h1>Penthouse T3 · Setúbal<br/>950.000 €</h1>
+      <p>154 m² úteis · terraço privativo · certificado A · condomínio com piscina e ginásio.</p>
+      <div class="row">
+        <a class="btn gold" id="wa2" href="#" target="_blank" rel="noopener">Receber dossier no WhatsApp</a>
+        <a class="btn" href="setubal.html">Ver página do imóvel</a>
+        <button class="btn" id="replay">↺ Repetir</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const WHATSAPP = "351XXXXXXXXX"; // ← mesmo número do site
+    const waLink = "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Olá, vi o vídeo da Penthouse T3 em Setúbal e gostaria de receber o dossier completo.");
+    document.getElementById('wa').href = waLink;
+    document.getElementById('wa2').href = waLink;
+
+    const stage = document.getElementById('stage');
+    const TOTAL = 30, DUR = 3400;
+    // legendas em momentos-chave (índice da foto -> texto)
+    const caps = {
+      0:["Setúbal · Penthouse","Vida acima do ordinário"],
+      4:["Terraço privativo","Vista panorâmica sobre a Arrábida"],
+      10:["Interiores","154 m² úteis · acabamentos contemporâneos"],
+      16:["Suíte & quartos","Três quartos, três casas de banho"],
+      22:["Condomínio premium","Piscina · ginásio · garagem"],
+      27:["Certificado A · 2025","Nova a estrear"],
+    };
+
+    // criar slides
+    const slides = [];
+    for (let i=1;i<=TOTAL;i++){
+      const n=String(i).padStart(2,'0');
+      const d=document.createElement('div'); d.className='slide';
+      const im=document.createElement('img'); im.src='assets/setubal-'+n+'.jpg'; im.alt='Penthouse Setúbal '+i;
+      d.appendChild(im); stage.insertBefore(d, document.getElementById('bar').nextSibling);
+      slides.push(d);
+    }
+
+    const capBox=document.getElementById('cap'), capEb=document.getElementById('cap-eb'), capT=document.getElementById('cap-t');
+    const bar=document.getElementById('bar');
+    let idx=0, timer=null, playing=false;
+
+    function showCap(i){
+      if(caps[i]){ capEb.textContent=caps[i][0]; capT.textContent=caps[i][1]; capBox.classList.add('show'); }
+      else { capBox.classList.remove('show'); }
+    }
+    function go(i){
+      slides.forEach(s=>s.classList.remove('on'));
+      const im=slides[i].querySelector('img'); im.style.animation='none'; void im.offsetWidth; im.style.animation='';
+      slides[i].classList.add('on');
+      showCap(i);
+      bar.style.width=((i+1)/TOTAL*100)+'%';
+    }
+    function next(){
+      idx++;
+      if(idx>=TOTAL){ stop(); document.getElementById('end').classList.remove('hide'); return; }
+      go(idx);
+    }
+    function start(){
+      document.getElementById('start').classList.add('hide');
+      document.getElementById('end').classList.add('hide');
+      idx=0; go(0); playing=true; document.getElementById('toggle').textContent='Pausar';
+      clearInterval(timer); timer=setInterval(next,DUR);
+    }
+    function stop(){ clearInterval(timer); playing=false; document.getElementById('toggle').textContent='Retomar'; }
+    function toggle(){ if(playing) stop(); else { playing=true; document.getElementById('toggle').textContent='Pausar'; clearInterval(timer); timer=setInterval(next,DUR);} }
+
+    document.getElementById('play-btn').addEventListener('click', start);
+    document.getElementById('replay').addEventListener('click', start);
+    document.getElementById('toggle').addEventListener('click', toggle);
+  </script>
+</body>
+</html>
