@@ -32,7 +32,7 @@ const CONFIG = {
       tipo:      "T3",
       local:     "Setúbal",
       preco:     "950.000 €",
-      destaque:  "Piso elevado · 2 lugares em box · arrecadação · documentação pronta",
+      destaque:  "Penthouse T3 nova · terraço privativo · vista panorâmica · garagem",
       area:      "154 m²",
       quartos:   "3",
       wc:        "3",
