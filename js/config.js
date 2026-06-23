@@ -62,7 +62,7 @@ const CONFIG = {
       certif:    "A",
       entrega:   "Final de 2026",
       dossier:   true,
-      url:       "gaia.html",
+      url:       "gaia-c.html",
     },
     {
       id:        "gaia-d",
@@ -84,7 +84,7 @@ const CONFIG = {
       certif:    "A",
       entrega:   "Final de 2026",
       dossier:   true,
-      url:       "gaia.html",
+      url:       "gaia-d.html",
     },
     {
       id:         "quarteira",

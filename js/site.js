@@ -31,7 +31,7 @@ function renderNav(activePage) {
       <a href="${pageUrl('index.html')}"    ${A('index')}>${t('navInicio')}</a>
       <a href="${pageUrl('imoveis.html')}"  ${portfolioActive ? 'class="active"':''}>${t('navPortfolio')}</a>
       <a href="${pageUrl('setubal.html')}"  ${A('setubal')}>${t('navSetubal')}</a>
-      <a href="${pageUrl('gaia.html')}"     ${A('gaia')}>${t('navGaia')}</a>
+      <a href="${pageUrl('gaia.html')}"     ${['gaia','gaia-c','gaia-d'].includes(activePage)?'class="active"':''}>${t('navGaia')}</a>
       <a href="${pageUrl('quarteira.html')}" ${A('quarteira')}>${t('navAlgarve')}</a>
       <a href="${pageUrl('sobre.html')}"    ${A('sobre')}>${t('navSobre')}</a>
       <a href="${pageUrl('processo.html')}" ${A('processo')}>${t('navProcesso')}</a>
