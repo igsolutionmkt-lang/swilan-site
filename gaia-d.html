@@ -184,7 +184,7 @@
   <script>
   document.addEventListener('DOMContentLoaded', () => {
     const gal = document.getElementById('gal'); let html='';
-    for (let i=1;i<=9;i++){ const n=String(i).padStart(2,'0'); html += `<img src="assets/gaia-d-${n}.jpg" alt="Fração D — imagem ${i}" loading="lazy" data-idx="${i-1}"/>`; }
+    [1,2,4,5,6,7,8,9].forEach((i,k)=>{ const n=String(i).padStart(2,'0'); html += `<img src="assets/gaia-d-${n}.jpg" alt="Fração D — imagem ${k+1}" loading="lazy" data-idx="${k}"/>`; });
     gal.innerHTML = html;
     const u = waUrl("Olá, tenho interesse na Fração D em Gaia/Foz. Gostaria de receber o dossier completo.");
     ['hero-wa','form-wa','wa-float'].forEach(id => { const el=document.getElementById(id); if(el) el.href=u; });
