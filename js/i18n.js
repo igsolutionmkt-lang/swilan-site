@@ -68,7 +68,7 @@ const I18N = {
     formOk:         "Obrigado. A sua informação foi recebida. Em breve será enviado o dossier ou o próximo passo de acordo com o imóvel selecionado.",
     formErro:       "Ocorreu um erro. Por favor fale connosco no WhatsApp.",
     waDirecto:      "ou fale diretamente",
-    waMsg:          "Olá, gostaria de receber informação sobre o portfólio SWILAN CUÉNOD.",
+    waMsg:          "Olá, tenho interesse no portfólio imobiliário. Gostaria de receber mais informações e o dossier do imóvel.",
 
     // ── Footer ────────────────────────────────
     footerLinks:  ["Portfólio","Setúbal","Gaia/Foz","Algarve","Contacto"],
@@ -88,7 +88,7 @@ const I18N = {
 
     // ── Compatibilidade páginas internas (reescritas na Fase 2) ──
     heroTag:"Portfólio Imobiliário Privado Premium · Portugal",
-    heroTitle:"Apartamentos premium em Portugal\ncom documentação pronta e acesso privado",
+    heroTitle:"Apartamentos premium em Portugal\ncom acesso privado a informação documentada",
     heroSub:"Unidades selecionadas em Setúbal, Gaia/Foz e Algarve. Dossier privado mediante pedido a compradores qualificados.",
     imoveisTag:"Portfólio", imoveisTitle:"O nosso\nportfólio privado",
     porqueTag:"Confiança", porqueTitle:"Informação clara\nantes da decisão",

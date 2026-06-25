@@ -186,7 +186,7 @@
     const gal = document.getElementById('gal'); let html='';
     [1,2,4,5,6,7,8,9].forEach((i,k)=>{ const n=String(i).padStart(2,'0'); html += `<img src="assets/gaia-d-${n}.jpg" alt="Fração D — imagem ${k+1}" loading="lazy" data-idx="${k}"/>`; });
     gal.innerHTML = html;
-    const u = waUrl("Olá, tenho interesse na Fração D em Gaia/Foz. Gostaria de receber o dossier completo.");
+    const u = waUrl("Olá, tenho interesse na Fração D em Gaia/Foz. Gostaria de receber o dossier técnico e informações sobre a entrega prevista para final de 2026.");
     ['hero-wa','form-wa','wa-float'].forEach(id => { const el=document.getElementById(id); if(el) el.href=u; });
     const imgs = Array.from(document.querySelectorAll('.gallery-grid img')).map(i=>i.src);
     let cur=0; const lb=document.getElementById('lightbox'), li=document.getElementById('lightbox-img');

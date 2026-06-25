@@ -56,7 +56,7 @@ function renderFooter() {
     <div class="logo">SWILAN CUÉNOD</div>
     <div class="sub">${CONFIG.empresa.razao} · NIF ${CONFIG.empresa.nif}</div>
     <div class="sub" style="margin-top:.3rem">${CONFIG.empresa.morada}</div>
-    <div class="sub" style="margin-top:.3rem">Documentação disponível mediante pedido a compradores qualificados.</div>
+    <div class="sub" style="margin-top:.6rem;max-width:680px;margin-left:auto;margin-right:auto;line-height:1.6;opacity:.6;">Informações, áreas, imagens, plantas, acabamentos e condições sujeitos a confirmação documental. Dossier completo disponível mediante pedido.</div>
     <div class="links">${linksHtml}</div>
     <div class="copy">${copyTxt}</div>
   `;
