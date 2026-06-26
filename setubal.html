@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0E1C2B"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" href="favicon.ico"/>
   <title>T3 pronto em Setúbal | Dossier privado | SWILAN CUÉNOD</title>
   <meta name="description" content="T3 pronto em Setúbal, com dois lugares em box, arrecadação, visitas privadas e dossier completo mediante pedido."/>
   <meta name="keywords" content="T3 pronto em Setúbal, apartamento T3 Setúbal com estacionamento, imóvel premium Setúbal, dossier privado Setúbal"/>
@@ -54,7 +57,7 @@
 
   <!-- HERO -->
   <section id="ihero">
-    <img src="assets/setubal.jpg" alt="T3 pronto em Setúbal, piso elevado" loading="eager"/>
+    <img src="assets/setubal.jpg" alt="T3 pronto em Setúbal, piso elevado" loading="eager" fetchpriority="high"/>
     <div class="ov"></div>
     <div class="c">
       <span class="istate">Pronto para venda</span>
@@ -121,6 +124,8 @@
   </section>
 
   <!-- GALERIA (30 fotos) -->
+  <p class="certif-note" style="text-align:center;font-size:.8rem;opacity:.55;padding:0 1.5rem 2.5rem;max-width:760px;margin:0 auto;">Classe energ&eacute;tica: a confirmar no dossier.</p>
+
   <section id="galeria" style="background:var(--navy);padding:5rem 1.5rem;">
     <div style="max-width:1200px;margin:0 auto;">
       <div class="section-title reveal" style="text-align:center;">
@@ -185,6 +190,8 @@
           <option>Falar com responsável</option>
         </select>
         <textarea name="mensagem" rows="3" class="form-input-dark" placeholder="Mensagem (opcional)" style="resize:none;"></textarea>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none;position:absolute;left:-9999px"/>
+        <div class="rgpd-row" style="color:rgba(247,243,236,.7);margin:.2rem 0;"><input id="f-rgpd" type="checkbox" name="rgpd" required/><label for="f-rgpd">Li e aceito a <a href="politica-privacidade.html" style="color:var(--gold);">Pol&iacute;tica de Privacidade</a>.</label></div>
         <button type="submit" class="btn btn-gold" style="width:100%;padding:1rem;">Receber dossier completo</button>
         <div id="form-msg"></div>
       </form>
@@ -213,7 +220,7 @@
     }
     gal.innerHTML = html;
 
-    const waMsg = waUrl("Olá, tenho interesse no T3 em Setúbal. Gostaria de receber o dossier completo e saber os próximos passos.");
+    const waMsg = waUrl(CONFIG.waMsgs.setubal);
     ['hero-wa','form-wa','wa-float'].forEach(id => { const el=document.getElementById(id); if(el) el.href=waMsg; });
 
     const imgs = Array.from(document.querySelectorAll('.gallery-grid img')).map(i=>i.src);

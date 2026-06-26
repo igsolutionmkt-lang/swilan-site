@@ -8,6 +8,15 @@ const CONFIG = {
   webhook:    "https://WEBHOOK_URL",   // ← substituir antes do deploy
   siteUrl:    "https://igsolutionmkt-lang.github.io/swilan-site/",
 
+  // Mensagens WhatsApp por imóvel
+  waMsgs: {
+    setubal:  "Olá, tenho interesse no T3 em Setúbal. Gostaria de receber o dossier completo e saber os próximos passos.",
+    gaiaC:    "Olá, tenho interesse na Fração C em Gaia/Foz. Gostaria de receber o dossier completo.",
+    gaiaD:    "Olá, tenho interesse na Fração D em Gaia/Foz. Gostaria de receber o dossier completo.",
+    quarteira:"Olá, tenho interesse no T1 em Quarteira. Gostaria de receber o dossier completo.",
+    geral:    "Olá, vi o portfólio da SWILAN CUÉNOD e gostaria de receber mais informações.",
+  },
+
   // PT-first: idiomas EN/ES/FR/DE entram na Fase 2 (ver i18n.js)
   langAtivo:  false,
 

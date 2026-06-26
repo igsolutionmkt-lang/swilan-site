@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0E1C2B"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" href="favicon.ico"/>
+  <link rel="canonical" href="https://igsolutionmkt-lang.github.io/swilan-site/quarteira.html"/>
   <title>T1 remodelado em Quarteira com vista mar | SWILAN CUÉNOD</title>
   <meta name="description" content="T1 remodelado em Quarteira, mobilado, com vista mar e proximidade à praia. Informação e dossier mediante pedido."/>
   <meta name="keywords" content="T1 Quarteira vista mar, apartamento Quarteira Algarve, T1 remodelado Algarve, apartamento perto da praia Quarteira"/>
@@ -51,7 +55,7 @@
 
   <!-- HERO -->
   <section id="ihero">
-    <img src="assets/quarteira.jpg" alt="T1 remodelado em Quarteira, vista mar" loading="eager" onerror="this.style.display='none'"/>
+    <img src="assets/quarteira.jpg" alt="T1 remodelado em Quarteira, vista mar" loading="eager" fetchpriority="high" onerror="this.style.display='none'"/>
     <div class="ov"></div>
     <div class="c">
       <span class="istate">Lifestyle Algarve</span>
@@ -113,6 +117,8 @@
   </section>
 
   <!-- GALERIA -->
+  <p class="certif-note" style="text-align:center;font-size:.8rem;opacity:.55;padding:0 1.5rem 2.5rem;max-width:760px;margin:0 auto;">Classe energ&eacute;tica: E (certificado dispon&iacute;vel no dossier).</p>
+
   <section id="galeria" style="background:var(--navy);padding:5rem 1.5rem;">
     <div style="max-width:1100px;margin:0 auto;">
       <div class="section-title reveal" style="text-align:center;">
@@ -191,6 +197,8 @@
           <option>Falar com responsável</option>
         </select>
         <textarea name="mensagem" rows="3" class="form-input-dark" placeholder="Mensagem (opcional)" style="resize:none;"></textarea>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none;position:absolute;left:-9999px"/>
+        <div class="rgpd-row" style="color:rgba(247,243,236,.7);margin:.2rem 0;"><input id="f-rgpd" type="checkbox" name="rgpd" required/><label for="f-rgpd">Li e aceito a <a href="politica-privacidade.html" style="color:var(--gold);">Pol&iacute;tica de Privacidade</a>.</label></div>
         <button type="submit" class="btn btn-gold" style="width:100%;padding:1rem;">Receber dossier completo</button>
         <div id="form-msg"></div>
       </form>
@@ -210,7 +218,7 @@
   <script src="js/site.js"></script>
   <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const u = waUrl("Olá, tenho interesse no T1 em Quarteira. Gostaria de receber o dossier completo e mais informações.");
+    const u = waUrl(CONFIG.waMsgs.quarteira);
     ['hero-wa','form-wa','wa-float'].forEach(id => { const el=document.getElementById(id); if(el) el.href=u; });
     const imgs = Array.from(document.querySelectorAll('.gallery-grid img')).map(i=>i.src);
     let cur=0; const lb=document.getElementById('lightbox'), li=document.getElementById('lightbox-img');

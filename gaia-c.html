@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0E1C2B"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" href="favicon.ico"/>
   <title>Fração C — T2 com terraço privativo de 136 m² | Gaia/Foz | SWILAN CUÉNOD</title>
   <meta name="description" content="Fração C — T2 em Canidelo, Gaia/Foz, com 238 m² de área total, terraço privativo de 136 m² e 2 lugares em box. Entrega final 2026. Dossier mediante pedido."/>
   <meta name="keywords" content="T2 Gaia/Foz terraço, apartamento Canidelo Gaia, Sal D'Ouro Coast Gaia, apartamento em construção Gaia entrega 2026, T2 com terraço Gaia"/>
@@ -50,7 +53,7 @@
   <nav id="nav"></nav>
 
   <section id="ihero">
-    <img src="assets/gaia-c.jpg" alt="Fração C — terraço privativo, Gaia/Foz" loading="eager"/>
+    <img src="assets/gaia-c.jpg" alt="Fração C — terraço privativo, Gaia/Foz" loading="eager" fetchpriority="high"/>
     <div class="ov"></div>
     <div class="c">
       <span class="istate">Gaia/Foz · Entrega final 2026</span>
@@ -126,6 +129,8 @@
       </video>
     </div>
   </section>
+  <p class="certif-note" style="text-align:center;font-size:.8rem;opacity:.55;padding:0 1.5rem 2.5rem;max-width:760px;margin:0 auto;">Classe energ&eacute;tica: a confirmar no dossier.</p>
+
 
   <section id="galeria" style="background:var(--navy);padding:5rem 1.5rem;">
     <div style="max-width:1200px;margin:0 auto;">
@@ -177,6 +182,8 @@
           <option>Receber atualizações da obra</option>
         </select>
         <textarea name="mensagem" rows="3" class="form-input-dark" placeholder="Mensagem (opcional)" style="resize:none;"></textarea>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none;position:absolute;left:-9999px"/>
+        <div class="rgpd-row" style="color:rgba(247,243,236,.7);margin:.2rem 0;"><input id="f-rgpd" type="checkbox" name="rgpd" required/><label for="f-rgpd">Li e aceito a <a href="politica-privacidade.html" style="color:var(--gold);">Pol&iacute;tica de Privacidade</a>.</label></div>
         <button type="submit" class="btn btn-gold" style="width:100%;padding:1rem;">Receber dossier da Fração C</button>
         <div id="form-msg"></div>
       </form>
@@ -200,7 +207,7 @@
     const gal = document.getElementById('gal'); let html='';
     [1,2,3,5,6,7,8,9,10].forEach((i,k)=>{ const n=String(i).padStart(2,'0'); html += `<img src="assets/gaia-c-${n}.jpg" alt="Fração C — imagem ${k+1}" loading="lazy" data-idx="${k}"/>`; });
     gal.innerHTML = html;
-    const u = waUrl("Olá, tenho interesse na Fração C em Gaia/Foz. Gostaria de receber o dossier técnico e informações sobre a entrega prevista para final de 2026.");
+    const u = waUrl(CONFIG.waMsgs.gaiaC);
     ['hero-wa','form-wa','wa-float'].forEach(id => { const el=document.getElementById(id); if(el) el.href=u; });
     const imgs = Array.from(document.querySelectorAll('.gallery-grid img')).map(i=>i.src);
     let cur=0; const lb=document.getElementById('lightbox'), li=document.getElementById('lightbox-img');

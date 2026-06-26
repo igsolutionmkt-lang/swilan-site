@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0E1C2B"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" href="favicon.ico"/>
+  <link rel="canonical" href="https://igsolutionmkt-lang.github.io/swilan-site/contacto.html"/>
   <title>Contacto · Receber Dossier e Agendar Visita | SWILAN CUÉNOD</title>
   <meta name="description" content="Peça o dossier privado, agende uma visita ou entre na lista privada de interessados. Resposta direta a compradores qualificados."/>
   <meta property="og:type"  content="website"/>
@@ -56,53 +60,70 @@
         <!-- FORM QUALIFICADO -->
         <div class="reveal" style="transition-delay:.1s;">
           <form id="contact-form" novalidate class="qform">
-            <input type="text"  name="nome"     class="form-input full" placeholder="Nome" required/>
-            <input type="email" name="email"    class="form-input" placeholder="Email" required/>
-            <input type="tel"   name="telefone" class="form-input" placeholder="WhatsApp / telemóvel"/>
+            <div class="full"><label class="field-label" for="f-nome">Nome</label>
+              <input id="f-nome" type="text" name="nome" class="form-input" required autocomplete="name"/></div>
+            <div><label class="field-label" for="f-email">Email</label>
+              <input id="f-email" type="email" name="email" class="form-input" required autocomplete="email"/></div>
+            <div><label class="field-label" for="f-tel">Telefone / WhatsApp</label>
+              <input id="f-tel" type="tel" name="telefone" class="form-input" required autocomplete="tel"/></div>
 
-            <select name="imovel" class="form-input full" style="cursor:pointer;appearance:none;">
-              <option value="">Imóvel de interesse</option>
-              <option value="setubal-t3">Setúbal Panorama — T3</option>
-              <option value="gaia-c">Gaia/Foz — Fração C</option>
-              <option value="gaia-d">Gaia/Foz — Fração D</option>
-              <option value="quarteira-t1">Quarteira Algarve — T1</option>
-              <option value="comparar">Ainda estou a comparar</option>
-            </select>
+            <div class="full"><label class="field-label" for="f-imovel">Imóvel de interesse</label>
+              <select id="f-imovel" name="imovel" class="form-input" required style="cursor:pointer;appearance:none;">
+                <option value="">Selecione o imóvel</option>
+                <option value="setubal-t3">Setúbal Panorama — T3</option>
+                <option value="gaia-c">Gaia/Foz — Fração C</option>
+                <option value="gaia-d">Gaia/Foz — Fração D</option>
+                <option value="quarteira-t1">Quarteira — T1 Algarve</option>
+                <option value="comparar">Ainda estou a comparar</option>
+              </select></div>
 
-            <select name="objetivo" class="form-input" style="cursor:pointer;appearance:none;">
-              <option value="">Objetivo</option>
-              <option>Habitação própria</option>
-              <option>Segunda habitação</option>
-              <option>Investimento patrimonial</option>
-              <option>Compra para revenda</option>
-              <option>Ainda estou a analisar</option>
-            </select>
+            <div><label class="field-label" for="f-obj">Objetivo</label>
+              <select id="f-obj" name="objetivo" class="form-input" required style="cursor:pointer;appearance:none;">
+                <option value="">Selecione</option>
+                <option>Habitação própria</option>
+                <option>Segunda habitação</option>
+                <option>Investimento patrimonial</option>
+                <option>Compra para revenda</option>
+                <option>Ainda estou a analisar</option>
+              </select></div>
 
-            <select name="prazo" class="form-input" style="cursor:pointer;appearance:none;">
-              <option value="">Prazo de decisão</option>
-              <option>Imediato</option>
-              <option>30 dias</option>
-              <option>3 a 6 meses</option>
-              <option>Apenas a recolher informação</option>
-            </select>
+            <div><label class="field-label" for="f-prazo">Prazo de decisão</label>
+              <select id="f-prazo" name="prazo" class="form-input" style="cursor:pointer;appearance:none;">
+                <option value="">Selecione</option>
+                <option>Imediato</option>
+                <option>Até 30 dias</option>
+                <option>3 a 6 meses</option>
+                <option>Apenas a recolher informação</option>
+              </select></div>
 
-            <select name="financiamento" class="form-input" style="cursor:pointer;appearance:none;">
-              <option value="">Financiamento</option>
-              <option>Compra sem financiamento</option>
-              <option>Financiamento aprovado</option>
-              <option>Financiamento em análise</option>
-              <option>Ainda não sei</option>
-            </select>
+            <div><label class="field-label" for="f-fin">Financiamento</label>
+              <select id="f-fin" name="financiamento" class="form-input" style="cursor:pointer;appearance:none;">
+                <option value="">Selecione</option>
+                <option>Compra sem financiamento</option>
+                <option>Financiamento aprovado</option>
+                <option>Financiamento em análise</option>
+                <option>Ainda não sei</option>
+              </select></div>
 
-            <select name="pedido" class="form-input" style="cursor:pointer;appearance:none;">
-              <option value="">Pedido</option>
-              <option>Receber dossier</option>
-              <option>Agendar visita</option>
-              <option>Falar com responsável</option>
-              <option>Entrar na lista privada</option>
-            </select>
+            <div class="full"><label class="field-label" for="f-pedido">Pedido</label>
+              <select id="f-pedido" name="pedido" class="form-input" required style="cursor:pointer;appearance:none;">
+                <option value="">Selecione</option>
+                <option>Receber dossier</option>
+                <option>Agendar visita privada</option>
+                <option>Entrar na lista privada (Gaia)</option>
+                <option>Falar com responsável</option>
+              </select></div>
 
-            <textarea name="mensagem" rows="4" class="form-input full" placeholder="Mensagem (opcional)" style="resize:none;"></textarea>
+            <div class="full"><label class="field-label" for="f-msg">Mensagem (opcional)</label>
+              <textarea id="f-msg" name="mensagem" rows="3" class="form-input" style="resize:none;"></textarea></div>
+
+            <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none;position:absolute;left:-9999px"/>
+
+            <div class="full rgpd-row">
+              <input id="f-rgpd" type="checkbox" name="rgpd" required/>
+              <label for="f-rgpd">Li e aceito a <a href="politica-privacidade.html">Política de Privacidade</a>.</label>
+            </div>
+
             <button type="submit" class="btn btn-gold full" style="padding:1rem;">Enviar pedido</button>
             <div id="form-msg" class="full"></div>
           </form>
@@ -119,7 +140,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const el = document.getElementById('wa-cta');
-      if (el) el.href = waUrl("Olá, gostaria de receber o dossier de um imóvel SWILAN CUÉNOD.");
+      if (el) el.href = waUrl(CONFIG.waMsgs.geral);
     });
   </script>
 </body>
