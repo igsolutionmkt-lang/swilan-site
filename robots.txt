@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://igsolutionmkt-lang.github.io/swilan-site/sitemap.xml
+Sitemap: https://swilan.com/sitemap.xml

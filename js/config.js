@@ -4,27 +4,27 @@
 // ════════════════════════════════════════════
 
 const CONFIG = {
-  whatsapp:   "351XXXXXXXXX",          // ← substituir antes do deploy
-  webhook:    "https://WEBHOOK_URL",   // ← substituir antes do deploy
-  siteUrl:    "https://igsolutionmkt-lang.github.io/swilan-site/",
+  whatsapp:   "351918536823",          // WhatsApp oficial
+  webhook:    "https://hook.eu1.make.com/q7tshrxn5p2cxd2u66py67b4pbsi5oi7",   // Make — cenário SWILAN leads
+  siteUrl:    "https://swilan.com/",
 
   // Mensagens WhatsApp por imóvel
   waMsgs: {
-    setubal:  "Olá, tenho interesse no T3 em Setúbal. Gostaria de receber o dossier completo e saber os próximos passos.",
+    setubal:  "Olá, tenho interesse na Penthouse T3 em Setúbal. Gostaria de receber o dossier completo e saber os próximos passos.",
     gaiaC:    "Olá, tenho interesse na Fração C em Gaia/Foz. Gostaria de receber o dossier completo.",
     gaiaD:    "Olá, tenho interesse na Fração D em Gaia/Foz. Gostaria de receber o dossier completo.",
     quarteira:"Olá, tenho interesse no T1 em Quarteira. Gostaria de receber o dossier completo.",
     geral:    "Olá, vi o portfólio da SWILAN CUÉNOD e gostaria de receber mais informações.",
   },
 
-  // PT-first: idiomas EN/ES/FR/DE entram na Fase 2 (ver i18n.js)
-  langAtivo:  false,
+  // Idiomas ativos: PT (default), EN, ES — via ?lang= (ver i18n.js)
+  langAtivo:  true,
 
   empresa: {
     nome:   "SWILAN CUÉNOD",
     razao:  "Empreendimentos Imobiliários, Unipessoal Lda",
     nif:    "518637891",
-    morada: "Avenidas Novas, Lisboa, Portugal",
+    morada: "R. da Pedra do Cão 440, 5.º andar · 4400-396 Canidelo, V. N. Gaia",
     email:  "geral@swilancuenod.pt",
   },
 
@@ -68,7 +68,7 @@ const CONFIG = {
       quartos:   "2",
       wc:        "2",
       box:       "2",
-      certif:    "A",
+      certif:    "A confirmar",
       entrega:   "Final de 2026",
       dossier:   true,
       url:       "gaia-c.html",
@@ -83,14 +83,14 @@ const CONFIG = {
       tipo:      "T2",
       local:     "Canidelo · Vila Nova de Gaia",
       preco:     "Sob consulta",
-      destaque:  "Entrega final 2026 · terraço privativo 203 m² · sala/cozinha 47 m²",
-      area:      "Áreas completas no dossier",
+      destaque:  "Entrega final 2026 · terraço privativo 203 m² · sala/cozinha 47 m² · 2 lugares em box",
+      area:      "310 m² área total",
       areaPriv:  "107 m²",
       terraco:   "203 m²",
       quartos:   "2",
       wc:        "2",
       box:       "2",
-      certif:    "A",
+      certif:    "A confirmar",
       entrega:   "Final de 2026",
       dossier:   true,
       url:       "gaia-d.html",

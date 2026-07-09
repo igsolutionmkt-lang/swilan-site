@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0E1C2B"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" href="favicon.ico"/>
+  <title>Dossier Privado | Informação documentada | SWILAN CUÉNOD</title>
+  <meta name="description" content="Receba informação documentada sobre os imóveis do portfólio SWILAN CUÉNOD antes de avançar para visita ou proposta. Dossier privado mediante pedido."/>
+  <link rel="canonical" href="https://swilan.com/dossier.html"/>
+  <meta property="og:type"        content="website"/>
+  <meta property="og:url"         content="https://swilan.com/dossier.html"/>
+  <meta property="og:title"       content="Dossier Privado | SWILAN CUÉNOD"/>
+  <meta property="og:description" content="Receba informação documentada sobre os imóveis do portfólio SWILAN CUÉNOD antes de avançar para visita ou proposta."/>
+  <meta property="og:image"       content="https://swilan.com/assets/hero-drone.jpg"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Dossier Privado | SWILAN CUÉNOD","description":"Informação documentada sobre o portfólio imobiliário privado da SWILAN CUÉNOD, disponível mediante pedido a compradores qualificados.","url":"https://swilan.com/dossier.html","publisher":{"@type":"Organization","name":"SWILAN CUÉNOD Empreendimentos Imobiliários, Unipessoal Lda","url":"https://swilan.com/"}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* ── Hero ── */
+    #dhero {
+      background: var(--navy);
+      padding: clamp(5rem,12vh,9rem) 2rem clamp(3rem,8vh,6rem);
+      text-align: center;
+    }
+    #dhero .eyebrow { color: var(--gold); }
+    #dhero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.08;
+      max-width: 780px;
+      margin: 1rem auto;
+    }
+    #dhero .sub {
+      color: rgba(247,243,236,.72);
+      font-size: 1rem;
+      max-width: 580px;
+      margin: 1rem auto 2rem;
+      line-height: 1.7;
+    }
+    /* ── Cards dossier ── */
+    .dcard-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    @media (min-width: 900px) { .dcard-grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 540px) { .dcard-grid { grid-template-columns: 1fr; } }
+    .dcard {
+      background: #fff;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .dcard:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(14,28,43,.1); }
+    .dcard img { width: 100%; height: 180px; object-fit: cover; display: block; }
+    .dcard-body { padding: 1.2rem 1.2rem 1.4rem; }
+    .dcard-badge {
+      display: inline-block;
+      font-size: .6rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: .3rem .8rem;
+      margin-bottom: .7rem;
+      font-weight: 500;
+    }
+    .dcard-badge.pronto      { background: var(--gold); color: var(--navy); }
+    .dcard-badge.construcao  { background: var(--navy); color: var(--gold); border: 1px solid rgba(190,159,98,.4); }
+    .dcard-badge.lifestyle   { background: rgba(14,28,43,.08); color: var(--navy); border: 1px solid var(--line); }
+    .dcard h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--navy);
+      margin-bottom: .3rem;
+      line-height: 1.2;
+    }
+    .dcard .specs {
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--navy);
+      opacity: .5;
+      margin-bottom: 1rem;
+    }
+    /* ── Steps ── */
+    .steps-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    @media (max-width: 700px) {
+      .steps-row { grid-template-columns: 1fr; gap: 1.5rem; }
+      .steps-row::before { display: none; }
+    }
+    .steps-row::before {
+      content: '';
+      position: absolute;
+      top: 1.4rem;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: rgba(190,159,98,.3);
+      z-index: 0;
+    }
+    .step { text-align: center; position: relative; z-index: 1; padding: 0 .5rem; }
+    .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      font-weight: 300;
+      line-height: 1;
+      background: var(--navy);
+      display: inline-block;
+      padding: 0 .4rem;
+      margin-bottom: .6rem;
+    }
+    .step-label {
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(247,243,236,.65);
+      line-height: 1.4;
+    }
+    /* ── Check grid ── */
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .6rem 2rem;
+      max-width: 700px;
+      margin: 1.5rem auto 0;
+    }
+    @media (min-width: 768px) { .check-grid { grid-template-columns: repeat(3, 1fr); } }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      font-size: .88rem;
+      line-height: 1.5;
+      opacity: .78;
+    }
+    .check-item svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; stroke: var(--gold); }
+    /* ── Form dossier ── */
+    .dform-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 640px) { .dform-grid { grid-template-columns: 1fr; } }
+    .dform-grid .full { grid-column: 1 / -1; }
+    .field-label-d {
+      display: block;
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: .35rem;
+      opacity: .65;
+    }
+    .rgpd-row-d {
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+      font-size: .8rem;
+      line-height: 1.5;
+      opacity: .7;
+    }
+    .rgpd-row-d a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+    #form-msg { display: none; margin-top: 1rem; font-size: .88rem; }
+  </style>
+</head>
+<body data-page="dossier">
+  <nav id="nav"></nav>
+
+  <!-- HERO -->
+  <section id="dhero">
+    <div style="max-width:800px;margin:0 auto;">
+      <span class="eyebrow" data-i18n="dsEyebrow">Dossier Privado</span>
+      <h1 data-i18n="dsH1">Receba informação documentada<br/>antes de avançar</h1>
+      <p class="sub" data-i18n="dsSub">O dossier privado reúne as informações essenciais de cada imóvel para compradores qualificados: imagens, plantas, áreas, documentação disponível e próximos passos.</p>
+      <div class="btn-row" style="justify-content:center;">
+        <a href="#form-dossier" class="btn btn-gold" data-i18n="cardDossier">Receber dossier</a>
+        <a id="hero-wa" href="#" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="ctaWa">Falar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE É -->
+  <section class="section" style="background:var(--cream);">
+    <div class="section-inner" style="max-width:900px;text-align:center;">
+      <div class="section-title reveal">
+        <span class="eyebrow" data-i18n="dsOqEyebrow">O dossier privado</span>
+        <h2 data-i18n="dsOqH2">Informação completa antes da decisão</h2>
+        <span class="gold-line"></span>
+      </div>
+      <p class="reveal" data-i18n="dsOqP" style="max-width:640px;margin:0 auto 2rem;opacity:.75;line-height:1.8;font-size:.98rem;">
+        O dossier privado é enviado mediante pedido a compradores qualificados e reúne a informação necessária para analisar o imóvel com mais clareza antes de avançar para visita, proposta ou manifestação de interesse.
+      </p>
+      <div class="check-grid reveal">
+        <div class="check-item"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-i18n="dsChk1">Resumo do imóvel</span></div>
+        <div class="check-item"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-i18n="dsChk2">Imagens disponíveis</span></div>
+        <div class="check-item"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-i18n="dsChk3">Plantas</span></div>
+        <div class="check-item"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-i18n="dsChk4">Áreas confirmadas</span></div>
+        <div class="check-item"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-i18n="dsChk5">Estado atual do imóvel</span></div>
+        <div class="check-item"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-i18n="dsChk6">Documentação disponível</span></div>
+        <div class="check-item"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-i18n="dsChk7">Informação sobre visitas</span></div>
+        <div class="check-item"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-i18n="dsChk8">Próximos passos</span></div>
+        <div class="check-item"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span data-i18n="dsChk9">Contacto direto</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOSSIERS DISPONÍVEIS -->
+  <section class="section" style="background:var(--sand);">
+    <div class="section-inner" style="max-width:1100px;">
+      <div class="section-title reveal" style="text-align:center;">
+        <span class="eyebrow" data-i18n="dsCardsEyebrow">Dossiers disponíveis</span>
+        <h2 data-i18n="dsCardsH2">Escolha o imóvel</h2>
+        <span class="gold-line"></span>
+      </div>
+      <div class="dcard-grid reveal">
+
+        <div class="dcard">
+          <img src="assets/setubal.jpg" alt="Penthouse T3 em Setúbal" loading="lazy" width="400" height="180"/>
+          <div class="dcard-body">
+            <span class="dcard-badge pronto" data-i18n="bdgPronto">Pronto</span>
+            <h3 data-i18n="dsCardT1">Penthouse T3<br/>Setúbal</h3>
+            <p class="specs" data-i18n="dsSpecSet">154 m² · 3 quartos · Cert. A</p>
+            <a href="dossier.html?imovel=setubal-t3" class="btn btn-gold" style="width:100%;text-align:center;font-size:.75rem;padding:.7rem 1rem;" data-i18n="cardDossier">Receber dossier</a>
+          </div>
+        </div>
+
+        <div class="dcard">
+          <img src="assets/gaia-c.jpg" alt="T2 Fração C Gaia/Foz" loading="lazy" width="400" height="180"/>
+          <div class="dcard-body">
+            <span class="dcard-badge construcao" data-i18n="estadoConstrucao">Entrega final 2026</span>
+            <h3 data-i18n="dsCardT2">Fração C<br/>Gaia/Foz</h3>
+            <p class="specs" data-i18n="dsSpecC">238 m² · T2 · 136 m² terraço</p>
+            <a href="dossier.html?imovel=gaia-c" class="btn btn-gold" style="width:100%;text-align:center;font-size:.75rem;padding:.7rem 1rem;" data-i18n="cardDossier">Receber dossier</a>
+          </div>
+        </div>
+
+        <div class="dcard">
+          <img src="assets/gaia-d.jpg" alt="T2 Fração D Gaia/Foz" loading="lazy" width="400" height="180"/>
+          <div class="dcard-body">
+            <span class="dcard-badge construcao" data-i18n="estadoConstrucao">Entrega final 2026</span>
+            <h3 data-i18n="dsCardT3">Fração D<br/>Gaia/Foz</h3>
+            <p class="specs" data-i18n="dsSpecD">310 m² · T2 · 203 m² terraço</p>
+            <a href="dossier.html?imovel=gaia-d" class="btn btn-gold" style="width:100%;text-align:center;font-size:.75rem;padding:.7rem 1rem;" data-i18n="cardDossier">Receber dossier</a>
+          </div>
+        </div>
+
+        <div class="dcard">
+          <img src="assets/quarteira.jpg" alt="T1 Quarteira Algarve vista mar" loading="lazy" width="400" height="180"/>
+          <div class="dcard-body">
+            <span class="dcard-badge lifestyle" data-i18n="bdgDisp">Disponível</span>
+            <h3 data-i18n="dsCardT4">T1 Algarve<br/>Quarteira</h3>
+            <p class="specs" data-i18n="dsSpecQ">57 m² · T1 · Vista mar</p>
+            <a href="dossier.html?imovel=quarteira-t1" class="btn btn-gold" style="width:100%;text-align:center;font-size:.75rem;padding:.7rem 1rem;" data-i18n="cardDossier">Receber dossier</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="reveal" style="margin-top:1.5rem;">
+        <div class="dcard" style="display:flex;align-items:center;gap:2rem;padding:1.5rem 2rem;">
+          <div style="flex:1;">
+            <span class="dcard-badge pronto" style="margin-bottom:.5rem;" data-i18n="bdgPortfolio">Portfólio completo</span>
+            <h3 style="font-size:1.1rem;margin-bottom:.2rem;" data-i18n="dsPortH3">Receber todos os dossiers</h3>
+            <p style="font-size:.8rem;opacity:.6;line-height:1.5;" data-i18n="dsPortP">Receba informação sobre todos os imóveis disponíveis numa única resposta.</p>
+          </div>
+          <a href="dossier.html?imovel=portfolio" class="btn btn-gold" style="white-space:nowrap;font-size:.75rem;padding:.7rem 1.4rem;flex-shrink:0;" data-i18n="dsPortBtn">Receber portfólio completo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="section" style="background:var(--navy);">
+    <div class="section-inner" style="max-width:960px;">
+      <div class="section-title reveal" style="text-align:center;">
+        <span class="eyebrow" data-i18n="dsComoEyebrow">Como funciona</span>
+        <h2 style="color:var(--cream);" data-i18n="dsComoH2">5 passos simples</h2>
+        <span class="gold-line"></span>
+      </div>
+      <div class="steps-row reveal">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-label" data-i18n="dsStep1">Escolha<br/>o imóvel</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-label" data-i18n="dsStep2">Peça<br/>o dossier</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-label" data-i18n="dsStep3">Receba<br/>informação privada</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-label" data-i18n="dsStep4">Agende visita<br/>ou chamada</div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-label" data-i18n="dsStep5">Avance com<br/>proposta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO -->
+  <section id="form-dossier" class="section" style="background:var(--cream);">
+    <div class="section-inner" style="max-width:700px;">
+      <div class="section-title reveal" style="text-align:center;">
+        <span class="eyebrow" data-i18n="dsFormEyebrow">Pedido de dossier</span>
+        <h2 data-i18n="dsFormH2">Quer receber um dossier privado?</h2>
+        <span class="gold-line"></span>
+        <p style="opacity:.65;font-size:.9rem;margin-top:.8rem;" data-i18n="dsFormP">Preencha o formulário. Respondemos em poucas horas.</p>
+      </div>
+
+      <form id="contact-form" novalidate class="reveal">
+        <div class="dform-grid">
+
+          <div class="full">
+            <label class="field-label-d" for="d-nome" data-i18n="lblNome">Nome</label>
+            <input id="d-nome" type="text" name="nome" class="form-input" required autocomplete="name" placeholder="O seu nome" data-ph="dsPhNome"/>
+          </div>
+
+          <div>
+            <label class="field-label-d" for="d-email" data-i18n="lblEmail">Email</label>
+            <input id="d-email" type="email" name="email" class="form-input" required autocomplete="email" placeholder="email@exemplo.pt" data-ph="dsPhEmail"/>
+          </div>
+
+          <div>
+            <label class="field-label-d" for="d-tel" data-i18n="lblTel">Telefone / WhatsApp</label>
+            <input id="d-tel" type="tel" name="telefone" class="form-input" required autocomplete="tel" placeholder="+351 9XX XXX XXX" data-ph="dsPhTel"/>
+          </div>
+
+          <div class="full">
+            <label class="field-label-d" for="d-imovel" data-i18n="lblImovel">Imóvel de interesse</label>
+            <select id="d-imovel" name="imovel" class="form-input" required style="cursor:pointer;appearance:none;">
+              <option value="" data-i18n="optSelImovel">Selecione o imóvel</option>
+              <option value="setubal-t3">Penthouse T3 — Setúbal</option>
+              <option value="gaia-c">Gaia/Foz — Fração C</option>
+              <option value="gaia-d">Gaia/Foz — Fração D</option>
+              <option value="quarteira-t1">T1 — Quarteira, Algarve</option>
+              <option value="portfolio" data-i18n="optPortfolio">Portfólio completo</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="field-label-d" for="d-obj" data-i18n="lblObjetivo">Objetivo</label>
+            <select id="d-obj" name="objetivo" class="form-input" style="cursor:pointer;appearance:none;">
+              <option value="" data-i18n="optSelecione">Selecione</option>
+              <option value="Habitação própria" data-i18n="obj1">Habitação própria</option>
+              <option value="Segunda habitação" data-i18n="obj2">Segunda habitação</option>
+              <option value="Investimento patrimonial" data-i18n="obj3">Investimento patrimonial</option>
+              <option value="Compra para revenda" data-i18n="obj4">Compra para revenda</option>
+              <option value="Ainda estou a analisar" data-i18n="obj5">Ainda estou a analisar</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="field-label-d" for="d-prazo" data-i18n="lblPrazo">Prazo de decisão</label>
+            <select id="d-prazo" name="prazo" class="form-input" style="cursor:pointer;appearance:none;">
+              <option value="" data-i18n="optSelecione">Selecione</option>
+              <option value="Imediato" data-i18n="prz1">Imediato</option>
+              <option value="Até 30 dias" data-i18n="prz2">Até 30 dias</option>
+              <option value="3 a 6 meses" data-i18n="prz3">3 a 6 meses</option>
+              <option value="Apenas a recolher informação" data-i18n="prz4">Apenas a recolher informação</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label class="field-label-d" for="d-fin" data-i18n="lblFin">Financiamento</label>
+            <select id="d-fin" name="financiamento" class="form-input" style="cursor:pointer;appearance:none;">
+              <option value="" data-i18n="optSelecione">Selecione</option>
+              <option value="Compra sem financiamento" data-i18n="fin1">Compra sem financiamento</option>
+              <option value="Financiamento aprovado" data-i18n="fin2">Financiamento aprovado</option>
+              <option value="Financiamento em análise" data-i18n="fin3">Financiamento em análise</option>
+              <option value="Ainda não sei" data-i18n="fin4">Ainda não sei</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label class="field-label-d" for="d-msg" data-i18n="lblMsg">Mensagem (opcional)</label>
+            <textarea id="d-msg" name="mensagem" class="form-input" rows="3" placeholder="Alguma informação adicional que queira partilhar?" data-ph="dsPhMsg"></textarea>
+          </div>
+
+          <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none;position:absolute;left:-9999px"/>
+
+          <div class="full rgpd-row-d">
+            <input id="d-rgpd" type="checkbox" name="rgpd" required style="margin-top:2px;flex-shrink:0;accent-color:var(--navy);"/>
+            <label for="d-rgpd"><span data-i18n="rgpd1">Li e aceito a </span><a href="politica-privacidade.html"><span data-i18n="rgpd2">Política de Privacidade</span></a>.</label>
+          </div>
+
+          <div class="full">
+            <button type="submit" class="btn btn-gold" style="width:100%;padding:1rem;font-size:.9rem;" data-i18n="dsFormBtn">Enviar pedido de dossier</button>
+          </div>
+
+          <div class="full" id="form-msg"></div>
+
+        </div>
+      </form>
+
+      <p style="text-align:center;font-size:.72rem;opacity:.4;margin-top:1.5rem;line-height:1.6;">
+        <span data-i18n="dsLgpdNote">Ao enviar este formulário, autoriza o tratamento dos seus dados para resposta ao pedido de informação e envio do dossier solicitado. Consulte a </span><a href="politica-privacidade.html" style="color:inherit;text-decoration:underline;" data-i18n="rgpd2">Política de Privacidade</a>.
+      </p>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // WA hero link
+    const waEl = document.getElementById('hero-wa');
+    if (waEl) waEl.href = waUrl(t('waMsg'));
+
+    // Pré-seleção por query string (?imovel=setubal-t3)
+    const params = new URLSearchParams(location.search);
+    const iv = params.get('imovel');
+    if (iv) {
+      const sel = document.getElementById('d-imovel');
+      if (sel) { sel.value = iv; sel.dispatchEvent(new Event('change')); }
+      setTimeout(() => {
+        const formSection = document.getElementById('form-dossier');
+        if (formSection) formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+  });
+  </script>
+</body>
+</html>

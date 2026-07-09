@@ -38,6 +38,9 @@ function renderNav(activePage) {
       <a href="${pageUrl('contacto.html')}" ${A('contacto')}>${t('navContacto')}</a>
     </nav>
     <div id="nav-right">
+      <div class="lang-switch">
+        ${['pt','en','es'].map(l => `<a href="${langUrl(l)}" class="${getLang()===l?'active':''}">${l.toUpperCase()}</a>`).join('<span>·</span>')}
+      </div>
       <a href="${waUrl()}" class="btn-wa-nav" target="_blank" rel="noopener">${WA_SVG} ${t('navWa')}</a>
       <button id="nav-hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Menu">
         <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -58,17 +61,18 @@ function renderFooter() {
     <div class="sub" style="margin-top:.3rem">${CONFIG.empresa.morada}</div>
     <div class="links">${linksHtml}</div>
     <div class="links" style="margin-top:.4rem;">
-      <a href="${pageUrl('politica-privacidade.html')}">Política de Privacidade</a>
-      <a href="${pageUrl('cookies.html')}">Política de Cookies</a>
-      <a href="${pageUrl('termos.html')}">Termos e Condições</a>
+      <a href="${pageUrl('politica-privacidade.html')}">${t('footerPriv')}</a>
+      <a href="${pageUrl('cookies.html')}">${t('footerCookies')}</a>
+      <a href="${pageUrl('termos.html')}">${t('footerTermos')}</a>
     </div>
     <div class="copy">${copyTxt}</div>
     <div class="footer-legal">
-      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações</a>
+      <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">${t('footerLivro')}</a>
       &nbsp;·&nbsp;
-      <span>Resolução Alternativa de Litígios: em caso de litígio de consumo, pode recorrer a entidade de RAL competente conforme lei portuguesa.</span>
+      <a href="https://www.consumidor.gov.pt" target="_blank" rel="noopener">RAL</a>
+      &nbsp;·&nbsp;
+      <span>${t('footerDisclaimer')}</span>
     </div>
-    <div class="footer-disclaimer">As informações apresentadas estão sujeitas a confirmação documental. Imagens, áreas, preços e disponibilidade podem variar. Dossier completo mediante pedido.</div>
   `;
 }
 
@@ -172,13 +176,13 @@ function initImovelForm(origemLabel) {
 
     // consentimento RGPD
     const rgpd = form.querySelector('[name="rgpd"]');
-    if (rgpd && !rgpd.checked) { showErr('É necessário aceitar a Política de Privacidade.'); return; }
+    if (rgpd && !rgpd.checked) { showErr(t('formRgpdErro')); return; }
 
     // campos obrigatórios
-    const req = { nome:'Nome', email:'Email', telefone:'Telefone / WhatsApp', imovel:'Imóvel de interesse', pedido:'Pedido' };
+    const req = { nome:t('lblNome'), email:t('lblEmail'), telefone:t('lblTel'), imovel:t('lblImovel'), pedido:t('lblPedido') };
     for (const k in req) {
       const fld = form.querySelector(`[name="${k}"]`);
-      if (fld && !String(fld.value).trim()) { showErr(`Preencha o campo: ${req[k]}.`); if (fld.focus) fld.focus(); return; }
+      if (fld && !String(fld.value).trim()) { showErr(`${t('formPreencha')}${req[k]}.`); if (fld.focus) fld.focus(); return; }
     }
 
     const original = btn ? btn.textContent : '';
@@ -199,12 +203,27 @@ function initImovelForm(origemLabel) {
     if (finT[data.financiamento]) tags.push(finT[data.financiamento]);
     data.tags = tags.join(', ');
 
+    // Resumo formatado (HTML) — pronto a usar no corpo do email de notificação
+    const nomes = { 'setubal-t3':'Penthouse T3 — Setúbal', 'gaia-c':'Gaia/Foz — Fração C', 'gaia-d':'Gaia/Foz — Fração D', 'quarteira-t1':'T1 — Quarteira, Algarve', 'portfolio':'Portfólio completo' };
+    data.resumo =
+      '<b>Nome:</b> ' + (data.nome || '—') + '<br>' +
+      '<b>Email:</b> ' + (data.email || '—') + '<br>' +
+      '<b>Telefone:</b> ' + (data.telefone || '—') + '<br>' +
+      '<b>Imóvel:</b> ' + (nomes[data.imovel] || data.imovel || '—') + '<br>' +
+      '<b>Pedido:</b> ' + (data.pedido || '—') + '<br>' +
+      '<b>Objetivo:</b> ' + (data.objetivo || '—') + '<br>' +
+      '<b>Prazo:</b> ' + (data.prazo || '—') + '<br>' +
+      '<b>Financiamento:</b> ' + (data.financiamento || '—') + '<br>' +
+      '<b>Mensagem:</b> ' + (data.mensagem || '—') + '<br>' +
+      '<b>Tags:</b> ' + (data.tags || '—') + '<br>' +
+      '<b>Página:</b> ' + data.url;
+
     try {
       await fetch(CONFIG.webhook, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
-      if (msg) { msg.textContent = 'Obrigado. A sua informação foi recebida. Em breve receberá o dossier ou o próximo passo de acordo com o imóvel selecionado.'; msg.style.color = '#4ade80'; msg.style.display = 'block'; }
+      if (msg) { msg.textContent = t('formOk'); msg.style.color = '#4ade80'; msg.style.display = 'block'; }
       form.reset();
     } catch {
-      if (msg) { msg.textContent = 'Não foi possível enviar o pedido. Tente novamente ou fale diretamente por WhatsApp.'; msg.style.color = '#f87171'; msg.style.display = 'block'; }
+      if (msg) { msg.textContent = t('formErro'); msg.style.color = '#f87171'; msg.style.display = 'block'; }
     }
     if (btn) { btn.disabled = false; btn.textContent = original || 'Enviar pedido'; }
   });
@@ -224,13 +243,14 @@ function applyI18n() {
 
 function applyLangLinks() {
   if (!CONFIG.langAtivo) return;
-  const pages = ['index.html','imoveis.html','setubal.html','gaia.html','quarteira.html','contacto.html','sobre.html','processo.html','portfolio.html','gaia-c.html','gaia-d.html'];
+  const pages = ['index.html','imoveis.html','setubal.html','gaia.html','quarteira.html','contacto.html','sobre.html','processo.html','portfolio.html','gaia-c.html','gaia-d.html','dossier.html'];
   pages.forEach(page => document.querySelectorAll(`[href="${page}"]`).forEach(a => { a.href = pageUrl(page); }));
 }
 
 // ── Init ──────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.body.dataset.page || 'index';
+  document.documentElement.lang = { pt:'pt-PT', en:'en', es:'es' }[getLang()] || 'pt-PT';
   renderNav(page);
   renderFooter();
   renderWaFloat();

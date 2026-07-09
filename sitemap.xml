@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/</loc><priority>1.0</priority></url>
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/imoveis.html</loc><priority>0.9</priority></url>
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/setubal.html</loc><priority>0.9</priority></url>
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/gaia-c.html</loc><priority>0.9</priority></url>
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/gaia-d.html</loc><priority>0.9</priority></url>
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/quarteira.html</loc><priority>0.9</priority></url>
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/sobre.html</loc><priority>0.7</priority></url>
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/processo.html</loc><priority>0.7</priority></url>
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/contacto.html</loc><priority>0.8</priority></url>
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/politica-privacidade.html</loc><priority>0.3</priority></url>
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/termos.html</loc><priority>0.3</priority></url>
-  <url><loc>https://igsolutionmkt-lang.github.io/swilan-site/cookies.html</loc><priority>0.3</priority></url>
+  <url><loc>https://swilan.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://swilan.com/imoveis.html</loc><priority>0.9</priority></url>
+  <url><loc>https://swilan.com/setubal.html</loc><priority>0.9</priority></url>
+  <url><loc>https://swilan.com/gaia-c.html</loc><priority>0.9</priority></url>
+  <url><loc>https://swilan.com/gaia-d.html</loc><priority>0.9</priority></url>
+  <url><loc>https://swilan.com/gaia.html</loc><priority>0.8</priority></url>
+  <url><loc>https://swilan.com/dossier.html</loc><priority>0.7</priority></url>
+  <url><loc>https://swilan.com/quarteira.html</loc><priority>0.9</priority></url>
+  <url><loc>https://swilan.com/sobre.html</loc><priority>0.7</priority></url>
+  <url><loc>https://swilan.com/processo.html</loc><priority>0.7</priority></url>
+  <url><loc>https://swilan.com/contacto.html</loc><priority>0.8</priority></url>
+  <url><loc>https://swilan.com/politica-privacidade.html</loc><priority>0.3</priority></url>
+  <url><loc>https://swilan.com/termos.html</loc><priority>0.3</priority></url>
+  <url><loc>https://swilan.com/cookies.html</loc><priority>0.3</priority></url>
 </urlset>
