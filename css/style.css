@@ -281,11 +281,20 @@ img { display: block; max-width: 100%; }
 
 /* ── Bloco editorial split (imagem + texto) ── */
 .editorial { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; align-items: stretch; }
-@media (max-width: 900px) { .editorial { grid-template-columns: 1fr; } }
-.editorial.flip .editorial-img { order: 2; }
+@media (min-width: 901px) {
+  .editorial.flip .editorial-img { order: 2; }
+}
+@media (max-width: 900px) {
+  .editorial { grid-template-columns: 1fr; }
+  /* Em coluna única, a imagem fica sempre primeiro (o "flip" só existe em desktop) para
+     que duas fotos de secções vizinhas nunca fiquem coladas uma à outra sem separação. */
+  .editorial.flip .editorial-img { order: 0; }
+  .editorial.flip .editorial-text { order: 1; }
+  .editorial-img { box-shadow: 0 1px 0 rgba(190,159,98,.25); }
+}
 .editorial-img { min-height: 460px; background-size: cover; background-position: center; }
 .editorial-text { padding: 4rem 3.5rem; display: flex; flex-direction: column; justify-content: center; }
-@media (max-width: 640px) { .editorial-text { padding: 2.5rem 1.5rem; } .editorial-img { min-height: 300px; } }
+@media (max-width: 640px) { .editorial-text { padding: 2.5rem 1.5rem; } .editorial-img { min-height: 260px; } }
 .editorial-text h2 { font-size: clamp(1.9rem, 3.5vw, 3rem); margin-bottom: 1.2rem; }
 .editorial-text p { font-size: .95rem; line-height: 1.8; opacity: .78; margin-bottom: 1rem; }
 
