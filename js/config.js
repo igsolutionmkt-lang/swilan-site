@@ -25,7 +25,7 @@ const CONFIG = {
     razao:  "Empreendimentos Imobiliários, Unipessoal Lda",
     nif:    "518637891",
     morada: "R. da Pedra do Cão 440, 5.º andar · 4400-396 Canidelo, V. N. Gaia",
-    email:  "geral@swilancuenod.pt",
+    email:  "geral@swilan.com",
   },
 
   // ── Portfólio (4 imóveis · 3 estados) ──────────────────────────
