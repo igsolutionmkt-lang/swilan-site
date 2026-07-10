@@ -101,7 +101,7 @@ function renderMobileCta() {
   const bar = document.createElement('div');
   bar.id = 'mobile-cta';
   bar.innerHTML = `
-    <a href="${pageUrl('contacto.html')}" class="mcta-dossier">${t('stickyDossier')}</a>
+    <a href="${pageUrl('dossier.html')}" class="mcta-dossier">${t('stickyDossier')}</a>
     <a href="${waUrl()}" target="_blank" rel="noopener" class="mcta-wa">${WA_SVG} WhatsApp</a>
   `;
   document.body.appendChild(bar);

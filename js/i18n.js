@@ -110,7 +110,7 @@ const I18N = {
     // ── INDEX ─────────────────────────────────
     ixHeroTag:"Portfólio Imobiliário Privado Premium · Portugal",
     ixH1:"Apartamentos premium em Portugal",
-    ixSub:"Acesso privado a informação documentada sobre imóveis selecionados em Setúbal, Gaia/Foz e Algarve.",
+    ixSub:"Acesso privado a informação documentada sobre imóveis selecionados em Setúbal, Gaia/Foz e Algarve — Setúbal pronto para venda, Gaia/Foz com entrega prevista para final de 2026.",
     ixMicro:"Setúbal pronto para venda · Gaia/Foz entrega final 2026 · Algarve lifestyle",
     ixPortEyebrow:"O portfólio",
     ixPortH2:"Quatro imóveis.\nTrês momentos de oportunidade.",
@@ -442,7 +442,7 @@ const I18N = {
 
     ixHeroTag:"Private Premium Real Estate Portfolio · Portugal",
     ixH1:"Premium apartments in Portugal",
-    ixSub:"Private access to documented information on selected properties in Setúbal, Gaia/Foz and the Algarve.",
+    ixSub:"Private access to documented information on selected properties in Setúbal, Gaia/Foz and the Algarve — Setúbal ready for sale, Gaia/Foz scheduled for delivery in late 2026.",
     ixMicro:"Setúbal ready for sale · Gaia/Foz delivery late 2026 · Algarve lifestyle",
     ixPortEyebrow:"The portfolio",
     ixPortH2:"Four properties.\nThree moments of opportunity.",
@@ -763,7 +763,7 @@ const I18N = {
 
     ixHeroTag:"Portafolio Inmobiliario Privado Premium · Portugal",
     ixH1:"Apartamentos premium en Portugal",
-    ixSub:"Acceso privado a información documentada sobre inmuebles seleccionados en Setúbal, Gaia/Foz y el Algarve.",
+    ixSub:"Acceso privado a información documentada sobre inmuebles seleccionados en Setúbal, Gaia/Foz y el Algarve — Setúbal listo para la venta, Gaia/Foz con entrega prevista para finales de 2026.",
     ixMicro:"Setúbal listo para la venta · Gaia/Foz entrega finales de 2026 · Algarve lifestyle",
     ixPortEyebrow:"El portafolio",
     ixPortH2:"Cuatro inmuebles.\nTres momentos de oportunidad.",
