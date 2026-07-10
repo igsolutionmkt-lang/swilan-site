@@ -84,7 +84,7 @@ const I18N = {
 
     // ── Métricas / valores comuns ─────────────
     mTipologia:"Tipologia", mAreaTotal:"Área total", mABP:"Área bruta privativa", mTerraco:"Terraço privativo",
-    mBox:"Lugares em box", mArea:"Área", mExposicao:"Exposição", mDaPraia:"Da praia",
+    mBox:"Lugares em box", mArea:"Área", mExposicao:"Exposição", mPiso:"Piso", mDaPraia:"Da praia",
     mAreaUtil:"Área útil", mAreaBruta:"Área bruta", mAno:"Ano de construção", mEnergia:"Energia", mArrecad:"Arrecadação",
     vSim:"Sim", vPisoElevado:"Piso elevado", vVistaMar:"Vista mar",
 
@@ -109,8 +109,8 @@ const I18N = {
 
     // ── INDEX ─────────────────────────────────
     ixHeroTag:"Portfólio Imobiliário Privado Premium · Portugal",
-    ixH1:"Apartamentos premium em Portugal com acesso privado a informação documentada",
-    ixSub:"Portfólio privado com unidades selecionadas em Setúbal, Gaia/Foz e Algarve — Setúbal pronto para venda, Gaia/Foz com entrega prevista para final de 2026 e acompanhamento direto para compradores qualificados.",
+    ixH1:"Apartamentos premium em Portugal",
+    ixSub:"Acesso privado a informação documentada sobre imóveis selecionados em Setúbal, Gaia/Foz e Algarve.",
     ixMicro:"Setúbal pronto para venda · Gaia/Foz entrega final 2026 · Algarve lifestyle",
     ixPortEyebrow:"O portfólio",
     ixPortH2:"Quatro imóveis.\nTrês momentos de oportunidade.",
@@ -418,7 +418,7 @@ const I18N = {
     waIndex:"Hello, I'd like to receive the SWILAN CUÉNOD portfolio dossier.",
 
     mTipologia:"Type", mAreaTotal:"Total area", mABP:"Private gross area", mTerraco:"Private terrace",
-    mBox:"Garage spaces", mArea:"Area", mExposicao:"Aspect", mDaPraia:"To the beach",
+    mBox:"Garage spaces", mArea:"Area", mExposicao:"Aspect", mPiso:"Floor", mDaPraia:"To the beach",
     mAreaUtil:"Net area", mAreaBruta:"Gross area", mAno:"Year built", mEnergia:"Energy", mArrecad:"Storage room",
     vSim:"Yes", vPisoElevado:"Upper floor", vVistaMar:"Sea view",
 
@@ -441,8 +441,8 @@ const I18N = {
     distDocs:"Documentation available in the private dossier",
 
     ixHeroTag:"Private Premium Real Estate Portfolio · Portugal",
-    ixH1:"Premium apartments in Portugal with private access to documented information",
-    ixSub:"A private portfolio of selected units in Setúbal, Gaia/Foz and the Algarve — Setúbal ready for sale, Gaia/Foz scheduled for delivery in late 2026, with direct support for qualified buyers.",
+    ixH1:"Premium apartments in Portugal",
+    ixSub:"Private access to documented information on selected properties in Setúbal, Gaia/Foz and the Algarve.",
     ixMicro:"Setúbal ready for sale · Gaia/Foz delivery late 2026 · Algarve lifestyle",
     ixPortEyebrow:"The portfolio",
     ixPortH2:"Four properties.\nThree moments of opportunity.",
@@ -739,7 +739,7 @@ const I18N = {
     waIndex:"Hola, me gustaría recibir el dossier del portafolio SWILAN CUÉNOD.",
 
     mTipologia:"Tipología", mAreaTotal:"Superficie total", mABP:"Superficie bruta privativa", mTerraco:"Terraza privada",
-    mBox:"Plazas de garaje", mArea:"Superficie", mExposicao:"Orientación", mDaPraia:"A la playa",
+    mBox:"Plazas de garaje", mArea:"Superficie", mExposicao:"Orientación", mPiso:"Planta", mDaPraia:"A la playa",
     mAreaUtil:"Superficie útil", mAreaBruta:"Superficie bruta", mAno:"Año de construcción", mEnergia:"Energía", mArrecad:"Trastero",
     vSim:"Sí", vPisoElevado:"Planta alta", vVistaMar:"Vistas al mar",
 
@@ -762,8 +762,8 @@ const I18N = {
     distDocs:"Documentación disponible en el dossier privado",
 
     ixHeroTag:"Portafolio Inmobiliario Privado Premium · Portugal",
-    ixH1:"Apartamentos premium en Portugal con acceso privado a información documentada",
-    ixSub:"Portafolio privado con unidades seleccionadas en Setúbal, Gaia/Foz y el Algarve — Setúbal listo para la venta, Gaia/Foz con entrega prevista para finales de 2026 y acompañamiento directo para compradores cualificados.",
+    ixH1:"Apartamentos premium en Portugal",
+    ixSub:"Acceso privado a información documentada sobre inmuebles seleccionados en Setúbal, Gaia/Foz y el Algarve.",
     ixMicro:"Setúbal listo para la venta · Gaia/Foz entrega finales de 2026 · Algarve lifestyle",
     ixPortEyebrow:"El portafolio",
     ixPortH2:"Cuatro inmuebles.\nTres momentos de oportunidad.",
