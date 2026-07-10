@@ -203,7 +203,11 @@
     document.getElementById('lightbox-prev').addEventListener('click',()=>op((cur-1+imgs.length)%imgs.length));
     document.getElementById('lightbox-next').addEventListener('click',()=>op((cur+1)%imgs.length));
     lb.addEventListener('click',e=>{if(e.target===lb)cl();});
-    document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')cl();if(e.key==='ArrowLeft')op((cur-1+imgs.length)%imgs.length);if(e.key==='ArrowRight')op((cur+1)%imgs.length);});}
+    document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')cl();if(e.key==='ArrowLeft')op((cur-1+imgs.length)%imgs.length);if(e.key==='ArrowRight')op((cur+1)%imgs.length);});
+    // Swipe no telemóvel: deslizar para mudar de imagem
+    let _tx=0,_ty=0;
+    lb.addEventListener('touchstart',e=>{_tx=e.changedTouches[0].clientX;_ty=e.changedTouches[0].clientY;},{passive:true});
+    lb.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-_tx,dy=e.changedTouches[0].clientY-_ty;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.5){dx<0?op((cur+1)%imgs.length):op((cur-1+imgs.length)%imgs.length);}else if(Math.abs(dy)>80&&Math.abs(dy)>Math.abs(dx)*1.5){cl();}},{passive:true});}
   });
   </script>
 </body>

@@ -354,3 +354,29 @@ img { display: block; max-width: 100%; }
 .legal-wrap p, .legal-wrap li { font-size:.92rem; line-height:1.8; opacity:.8; }
 .legal-wrap ul { padding-left:1.2rem; margin:.4rem 0; }
 .legal-wrap a { color:var(--gold); text-decoration:underline; text-underline-offset:2px; }
+
+/* ── Afinação mobile (qualidade em telemóvel) ─────────────── */
+@media (max-width: 768px) {
+  /* o rodapé fixo já tem WhatsApp — esconder o botão flutuante (inline style precisa de !important) */
+  #wa-float { display: none !important; }
+}
+@media (max-width: 640px) {
+  /* hero da homepage: deixar crescer com o conteúdo em vez de cortar */
+  .page-hero { height: auto; min-height: 100svh; }
+  .page-hero .hero-content { padding: 6.5rem 1.25rem 2.75rem; }
+  .page-hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.5rem); line-height: 1.12; }
+  .page-hero p.sub { font-size: .95rem; margin-top: 1rem; }
+  .page-hero .micro { font-size: .62rem; letter-spacing: .12em; }
+  /* heros das páginas de imóvel */
+  #ihero h1 { font-size: clamp(1.9rem, 8vw, 2.6rem) !important; }
+  #ihero .sub { font-size: .95rem !important; }
+  /* botões a toda a largura = alvo de toque confortável */
+  .btn-row { flex-direction: column; align-items: stretch; }
+  .btn-row .btn { width: 100%; text-align: center; }
+  /* métrica solitária (5.ª) ocupa a linha inteira */
+  .metrics .metric:last-child:nth-child(odd) { grid-column: span 2; }
+  /* títulos de secção */
+  .section-title h2, .section h2 { font-size: clamp(1.6rem, 6.5vw, 2.1rem); }
+  /* cta final */
+  .cta-final { padding: 3rem 1.25rem; }
+}
