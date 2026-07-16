@@ -11,8 +11,8 @@ const CONFIG = {
   // Mensagens WhatsApp por imóvel
   waMsgs: {
     setubal:  "Olá, tenho interesse na Penthouse T3 em Setúbal. Gostaria de receber o dossier completo e saber os próximos passos.",
-    gaiaC:    "Olá, tenho interesse na Fração C em Gaia/Foz. Gostaria de receber o dossier completo.",
-    gaiaD:    "Olá, tenho interesse na Fração D em Gaia/Foz. Gostaria de receber o dossier completo.",
+    gaiaC:    "Olá, tenho interesse na Fração C em Gaia. Gostaria de receber o dossier completo.",
+    gaiaD:    "Olá, tenho interesse na Fração D em Gaia. Gostaria de receber o dossier completo.",
     quarteira:"Olá, tenho interesse no T1 em Quarteira. Gostaria de receber o dossier completo.",
     geral:    "Olá, vi o portfólio da SWILAN CUÉNOD e gostaria de receber mais informações.",
   },
@@ -54,10 +54,10 @@ const CONFIG = {
     {
       id:        "gaia-c",
       estado:    "construcao",
-      regiao:    "Gaia/Foz",
+      regiao:    "Gaia",
       foto:      "assets/gaia-c.jpg",
       fotoAlt:   "T2 Fração C, Sal D'Ouro Coast, Vila Nova de Gaia",
-      nome:      "Gaia/Foz — Fração C",
+      nome:      "Gaia — Fração C",
       tipo:      "T2",
       local:     "Canidelo · Vila Nova de Gaia",
       preco:     "Sob consulta",
@@ -76,10 +76,10 @@ const CONFIG = {
     {
       id:        "gaia-d",
       estado:    "construcao",
-      regiao:    "Gaia/Foz",
+      regiao:    "Gaia",
       foto:      "assets/gaia-d.jpg",
       fotoAlt:   "T2 Fração D, Sal D'Ouro Coast, Vila Nova de Gaia",
-      nome:      "Gaia/Foz — Fração D",
+      nome:      "Gaia — Fração D",
       tipo:      "T2",
       local:     "Canidelo · Vila Nova de Gaia",
       preco:     "Sob consulta",

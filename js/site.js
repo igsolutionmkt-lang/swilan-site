@@ -214,7 +214,7 @@ function initImovelForm(origemLabel) {
     data.tags = tags.join(', ');
 
     // Resumo formatado (HTML) — pronto a usar no corpo do email de notificação
-    const nomes = { 'setubal-t3':'Penthouse T3 — Setúbal', 'gaia-c':'Gaia/Foz — Fração C', 'gaia-d':'Gaia/Foz — Fração D', 'quarteira-t1':'T1 — Quarteira, Algarve', 'portfolio':'Portfólio completo' };
+    const nomes = { 'setubal-t3':'Penthouse T3 — Setúbal', 'gaia-c':'Gaia — Fração C', 'gaia-d':'Gaia — Fração D', 'quarteira-t1':'T1 — Quarteira, Algarve', 'portfolio':'Portfólio completo' };
     data.resumo =
       '<b>Nome:</b> ' + (data.nome || '—') + '<br>' +
       '<b>Email:</b> ' + (data.email || '—') + '<br>' +
