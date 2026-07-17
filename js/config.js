@@ -28,6 +28,12 @@ const CONFIG = {
     email:  "geral@swilan.com",
   },
 
+  // Redes sociais
+  redes: {
+    instagram: "https://www.instagram.com/swilan.realestate/",
+    facebook:  "https://www.facebook.com/profile.php?id=61591876264849",
+  },
+
   // ── Portfólio (4 imóveis · 3 estados) ──────────────────────────
   // estado: "pronto" | "construcao" | "lifestyle"
   imoveis: [
