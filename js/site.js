@@ -1,5 +1,5 @@
 // ════════════════════════════════════════════
-//  SWILAN CUÉNOD — Motor do site (PT-first)
+//  SWILAN — Motor do site (PT-first)
 // ════════════════════════════════════════════
 
 // ── Idioma (PT-first; multi-idioma na Fase 2) ────────────────────
@@ -27,9 +27,8 @@ function renderNav(activePage) {
   const A = p => activePage === p ? 'class="active"' : '';
 
   document.getElementById('nav').innerHTML = `
-    <a class="logo" href="${pageUrl('index.html')}">
-      SWILAN CUÉNOD
-      <span>Portfólio Imobiliário Privado</span>
+    <a class="logo" href="${pageUrl('index.html')}" aria-label="SWILAN · Private Real Estate">
+      <img src="assets/logo-horizontal.png" alt="SWILAN — Private Real Estate"/>
     </a>
     <nav id="nav-links">
       <a href="${pageUrl('index.html')}"    ${A('index')}>${t('navInicio')}</a>
@@ -60,7 +59,7 @@ function renderFooter() {
   const copyTxt = t('copy').replace(/©\s*\d{0,4}\s*/, `© ${year} `);
   const linksHtml = links.map((l,i) => `<a href="${pageUrl(hrefs[i])}">${l}</a>`).join('');
   document.getElementById('footer').innerHTML = `
-    <div class="logo">SWILAN CUÉNOD</div>
+    <div class="logo"><img src="assets/logo-horizontal.png" alt="SWILAN — Private Real Estate"/></div>
     <div class="sub">${CONFIG.empresa.razao} · NIF ${CONFIG.empresa.nif}</div>
     <div class="sub" style="margin-top:.3rem">${CONFIG.empresa.morada}</div>
     <div class="links">${linksHtml}</div>

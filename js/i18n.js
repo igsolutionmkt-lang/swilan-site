@@ -1,5 +1,5 @@
 // ════════════════════════════════════════════
-//  SWILAN CUÉNOD — Textos PT / EN / ES
+//  SWILAN — Textos PT / EN / ES
 //  Tradução sóbria, sem claims de rentabilidade.
 //  Chaves em falta em EN/ES caem para PT (fallback em t()).
 // ════════════════════════════════════════════
@@ -80,7 +80,7 @@ const I18N = {
     waGaiaD:    "Olá, tenho interesse na Fração D em Gaia. Gostaria de receber o dossier completo.",
     waGaia:     "Olá, tenho interesse nas frações T2 em Gaia (Canidelo), com entrega prevista para final de 2026. Gostaria de receber o dossier.",
     waQuarteira:"Olá, tenho interesse no T1 em Quarteira. Gostaria de receber o dossier completo.",
-    waIndex:    "Olá, gostaria de receber o dossier do portfólio SWILAN CUÉNOD.",
+    waIndex:    "Olá, gostaria de receber o dossier do portfólio SWILAN.",
 
     // ── Métricas / valores comuns ─────────────
     mTipologia:"Tipologia", mAreaTotal:"Área total", mABP:"Área bruta privativa", mTerraco:"Terraço privativo",
@@ -322,7 +322,7 @@ const I18N = {
     sbTag:"A empresa",
     sbHeroSub:"Portfólio Imobiliário Privado Premium em Portugal",
     sbQuemEyebrow:"Quem somos",
-    sbQuemH2:"A SWILAN CUÉNOD reúne um portfólio privado de oportunidades imobiliárias selecionadas em Portugal.",
+    sbQuemH2:"A SWILAN reúne um portfólio privado de oportunidades imobiliárias selecionadas em Portugal.",
     sbQuemP:"Com foco em imóveis residenciais premium, documentação organizada e acompanhamento direto a compradores qualificados — da informação à decisão.",
     sbDefEyebrow:"O que nos define",
     sbDefH2:"Acesso privado à informação",
@@ -377,7 +377,7 @@ const I18N = {
     footerPriv:"Política de Privacidade", footerCookies:"Política de Cookies", footerTermos:"Termos e Condições",
     footerLivro:"Livro de Reclamações",
     footerDisclaimer:"As informações apresentadas estão sujeitas a confirmação documental. Imagens, áreas, preços e disponibilidade podem variar. Dossier completo mediante pedido.",
-    copy:"© SWILAN CUÉNOD · Todos os direitos reservados",
+    copy:"© SWILAN · Todos os direitos reservados",
   },
 
   en: {
@@ -415,7 +415,7 @@ const I18N = {
     waGaiaD:"Hello, I'm interested in Unit D in Gaia. I'd like to receive the full dossier.",
     waGaia:"Hello, I'm interested in the T2 units in Gaia (Canidelo), scheduled for delivery in late 2026. I'd like to receive the dossier.",
     waQuarteira:"Hello, I'm interested in the T1 in Quarteira. I'd like to receive the full dossier.",
-    waIndex:"Hello, I'd like to receive the SWILAN CUÉNOD portfolio dossier.",
+    waIndex:"Hello, I'd like to receive the SWILAN portfolio dossier.",
 
     mTipologia:"Type", mAreaTotal:"Total area", mABP:"Private gross area", mTerraco:"Private terrace",
     mBox:"Garage spaces", mArea:"Area", mExposicao:"Aspect", mPiso:"Floor", mDaPraia:"To the beach",
@@ -645,7 +645,7 @@ const I18N = {
     sbTag:"The company",
     sbHeroSub:"Private Premium Real Estate Portfolio in Portugal",
     sbQuemEyebrow:"Who we are",
-    sbQuemH2:"SWILAN CUÉNOD brings together a private portfolio of selected real estate opportunities in Portugal.",
+    sbQuemH2:"SWILAN brings together a private portfolio of selected real estate opportunities in Portugal.",
     sbQuemP:"Focused on premium residential properties, organised documentation and direct support for qualified buyers — from information to decision.",
     sbDefEyebrow:"What defines us",
     sbDefH2:"Private access to information",
@@ -698,7 +698,7 @@ const I18N = {
     footerPriv:"Privacy Policy", footerCookies:"Cookie Policy", footerTermos:"Terms & Conditions",
     footerLivro:"Complaints Book",
     footerDisclaimer:"All information is subject to documentary confirmation. Images, areas, prices and availability may vary. Full dossier on request.",
-    copy:"© SWILAN CUÉNOD · All rights reserved",
+    copy:"© SWILAN · All rights reserved",
   },
 
   es: {
@@ -736,7 +736,7 @@ const I18N = {
     waGaiaD:"Hola, me interesa la Unidad D en Gaia. Me gustaría recibir el dossier completo.",
     waGaia:"Hola, me interesan las unidades T2 en Gaia (Canidelo), con entrega prevista para finales de 2026. Me gustaría recibir el dossier.",
     waQuarteira:"Hola, me interesa el T1 en Quarteira. Me gustaría recibir el dossier completo.",
-    waIndex:"Hola, me gustaría recibir el dossier del portafolio SWILAN CUÉNOD.",
+    waIndex:"Hola, me gustaría recibir el dossier del portafolio SWILAN.",
 
     mTipologia:"Tipología", mAreaTotal:"Superficie total", mABP:"Superficie bruta privativa", mTerraco:"Terraza privada",
     mBox:"Plazas de garaje", mArea:"Superficie", mExposicao:"Orientación", mPiso:"Planta", mDaPraia:"A la playa",
@@ -966,7 +966,7 @@ const I18N = {
     sbTag:"La empresa",
     sbHeroSub:"Portafolio Inmobiliario Privado Premium en Portugal",
     sbQuemEyebrow:"Quiénes somos",
-    sbQuemH2:"SWILAN CUÉNOD reúne un portafolio privado de oportunidades inmobiliarias seleccionadas en Portugal.",
+    sbQuemH2:"SWILAN reúne un portafolio privado de oportunidades inmobiliarias seleccionadas en Portugal.",
     sbQuemP:"Con foco en inmuebles residenciales premium, documentación organizada y acompañamiento directo a compradores cualificados — de la información a la decisión.",
     sbDefEyebrow:"Lo que nos define",
     sbDefH2:"Acceso privado a la información",
@@ -1019,7 +1019,7 @@ const I18N = {
     footerPriv:"Política de Privacidad", footerCookies:"Política de Cookies", footerTermos:"Términos y Condiciones",
     footerLivro:"Libro de Reclamaciones",
     footerDisclaimer:"La información presentada está sujeta a confirmación documental. Imágenes, superficies, precios y disponibilidad pueden variar. Dossier completo a petición.",
-    copy:"© SWILAN CUÉNOD · Todos los derechos reservados",
+    copy:"© SWILAN · Todos los derechos reservados",
   },
 };
 

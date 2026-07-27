@@ -1,5 +1,5 @@
 // ════════════════════════════════════════════
-//  SWILAN CUÉNOD — Configuração central
+//  SWILAN — Configuração central
 //  Portfólio Imobiliário Privado Premium
 // ════════════════════════════════════════════
 
@@ -14,14 +14,14 @@ const CONFIG = {
     gaiaC:    "Olá, tenho interesse na Fração C em Gaia. Gostaria de receber o dossier completo.",
     gaiaD:    "Olá, tenho interesse na Fração D em Gaia. Gostaria de receber o dossier completo.",
     quarteira:"Olá, tenho interesse no T1 em Quarteira. Gostaria de receber o dossier completo.",
-    geral:    "Olá, vi o portfólio da SWILAN CUÉNOD e gostaria de receber mais informações.",
+    geral:    "Olá, vi o portfólio da SWILAN e gostaria de receber mais informações.",
   },
 
   // Idiomas ativos: PT (default), EN, ES — via ?lang= (ver i18n.js)
   langAtivo:  true,
 
   empresa: {
-    nome:   "SWILAN CUÉNOD",
+    nome:   "SWILAN",
     razao:  "Empreendimentos Imobiliários, Unipessoal Lda",
     nif:    "518637891",
     morada: "R. da Pedra do Cão 440, 5.º andar · 4400-396 Canidelo, V. N. Gaia",
