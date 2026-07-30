@@ -46,7 +46,7 @@ const CONFIG = {
       nome:      "Setúbal Panorama",
       tipo:      "T3",
       local:     "Setúbal",
-      preco:     "Sob consulta",
+      preco:     "990.000 €",
       destaque:  "T3 pronto · 2 lugares em box · arrecadação · visitas privadas",
       area:      "154 m²",
       quartos:   "3",
