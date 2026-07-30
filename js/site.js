@@ -174,8 +174,13 @@ function initImovelForm(origemLabel) {
       <option value="falar-responsavel">${t('formPedido3')}</option>`;
   }
 
+  // Página de agradecimento (só onde estiver definida em CONFIG.obrigado)
+  const thanksPage = (CONFIG.obrigado || {})[document.body.dataset.page || ''] || null;
+  let submitting = false;
+
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
+    if (submitting) return;               // impede cliques duplicados
     const btn = form.querySelector('[type=submit]');
     const msg = document.getElementById('form-msg');
     const showErr = (m) => { if (msg) { msg.textContent = m; msg.style.color = '#f87171'; msg.style.display = 'block'; } };
@@ -201,8 +206,10 @@ function initImovelForm(origemLabel) {
       if (fld && !String(fld.value).trim()) { showErr(`${t('formPreencha')}${req[k]}.`); if (fld.focus) fld.focus(); return; }
     }
 
+    submitting = true;
     const original = btn ? btn.textContent : '';
-    if (btn) { btn.disabled = true; btn.textContent = '…'; }
+    if (btn) { btn.disabled = true; btn.textContent = t('formEnviando'); }
+    if (msg) { msg.style.display = 'none'; }
     const data = Object.fromEntries(new FormData(form));
     delete data.website;
     data.origem = origemLabel; data.idioma = getLang(); data.url = location.href;
@@ -235,12 +242,21 @@ function initImovelForm(origemLabel) {
       '<b>Página:</b> ' + data.url;
 
     try {
-      await fetch(CONFIG.webhook, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
+      const res = await fetch(CONFIG.webhook, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
+      // Só é sucesso se o serviço confirmar (2xx). Sem isto, um erro 4xx/5xx
+      // passaria por bom e contaria como conversão indevida.
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+
       if (msg) { msg.textContent = t('formOk'); msg.style.color = '#4ade80'; msg.style.display = 'block'; }
       form.reset();
+
+      // Redireciona apenas após confirmação real do envio (mantém o idioma)
+      if (thanksPage) { window.location.assign(pageUrl(thanksPage)); return; }
     } catch {
+      // Erro: dados preenchidos mantêm-se (não há reset) e o botão volta a ficar ativo
       if (msg) { msg.textContent = t('formErro'); msg.style.color = '#f87171'; msg.style.display = 'block'; }
     }
+    submitting = false;
     if (btn) { btn.disabled = false; btn.textContent = original || 'Enviar pedido'; }
   });
 }

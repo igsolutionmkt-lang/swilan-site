@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0E1C2B"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
+  <link rel="icon" href="favicon.ico" sizes="any"/>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <title>Pedido recebido | SWILAN</title>
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .ob-wrap {
+      min-height: 100svh;
+      display: flex; align-items: center; justify-content: center;
+      padding: 9rem 1.5rem 5rem;
+      background: var(--navy);
+    }
+    .ob-inner { max-width: 640px; width: 100%; text-align: center; }
+    .ob-check {
+      width: 62px; height: 62px; margin: 0 auto 1.8rem;
+      border: 1px solid var(--gold); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold);
+    }
+    .ob-inner h1 {
+      color: var(--cream);
+      font-size: clamp(2.2rem, 5.5vw, 3.4rem);
+      line-height: 1.1; margin-bottom: 1.3rem;
+    }
+    .ob-inner p.ob-txt {
+      color: rgba(247,243,236,.72);
+      font-size: 1rem; line-height: 1.85;
+      max-width: 520px; margin: 0 auto 2.4rem;
+    }
+    .ob-wa {
+      display: inline-flex; align-items: center; gap: .6rem;
+      background: #25D366; color: #fff;
+      padding: .75rem 2rem; font-size: .75rem;
+      letter-spacing: .14em; text-transform: uppercase; font-weight: 500;
+      transition: opacity .2s;
+    }
+    .ob-wa:hover { opacity: .85; }
+    @media (max-width: 640px) {
+      .ob-wrap { padding: 7rem 1.2rem 4rem; }
+      .ob-inner .btn-row { flex-direction: column; }
+      .ob-inner .btn-row > * { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body data-page="obrigado-setubal">
+  <nav id="nav"></nav>
+
+  <main class="ob-wrap">
+    <div class="ob-inner">
+      <div class="ob-check" aria-hidden="true">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <span class="eyebrow" style="color:var(--gold);" data-i18n="obTag">Pedido recebido</span>
+      <h1 data-i18n="obH1">Pedido recebido</h1>
+      <p class="ob-txt" data-i18n="obTexto">Obrigado pelo seu interesse no Penthouse T3 em Setúbal. A equipa SWILAN recebeu o seu pedido e entrará em contacto consigo brevemente.</p>
+      <div class="btn-row" style="justify-content:center;gap:.9rem;">
+        <a href="setubal.html" class="btn btn-gold" data-i18n="obVoltar">Voltar ao imóvel</a>
+        <a id="ob-wa" href="#" target="_blank" rel="noopener" class="ob-wa">
+          <svg width="16" height="16" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.526 5.845L.057 23.886l6.187-1.452A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.81 9.81 0 01-5.007-1.372l-.36-.213-3.672.862.877-3.581-.234-.369A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+          <span data-i18n="ctaWa">Falar no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // WhatsApp: reutiliza o link oficial do site (mesma mensagem do imóvel de Setúbal)
+    const wa = document.getElementById('ob-wa');
+    if (wa) wa.href = waUrl(t('waSetubal'));
+
+    // Conversão: dispara uma única vez, e apenas se já existir um dataLayer
+    // (GTM/GA4). Sem GTM instalado nada é enviado — não criamos tags fictícias.
+    // Nenhum dado pessoal é incluído.
+    if (Array.isArray(window.dataLayer) && !window.__leadPushed) {
+      window.__leadPushed = true;
+      window.dataLayer.push({
+        event: 'generate_lead',
+        lead_type: 'setubal_property_form',
+        property: 'penthouse_t3_setubal'
+      });
+    }
+  });
+  </script>
+  <script data-goatcounter="https://swilan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

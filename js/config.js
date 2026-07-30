@@ -20,6 +20,12 @@ const CONFIG = {
   // Idiomas ativos: PT (default), EN, ES — via ?lang= (ver i18n.js)
   langAtivo:  true,
 
+  // Páginas de agradecimento por página (data-page) — usadas para medir
+  // conversões de campanha. Só redireciona após envio confirmado pelo serviço.
+  obrigado: {
+    setubal: "obrigado-setubal.html",
+  },
+
   empresa: {
     nome:   "SWILAN",
     razao:  "Empreendimentos Imobiliários, Unipessoal Lda",
