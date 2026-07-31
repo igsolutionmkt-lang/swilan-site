@@ -261,6 +261,44 @@ function initImovelForm(origemLabel) {
   });
 }
 
+// ── Consentimento de cookies (RGPD / Google Consent Mode v2) ──────
+function setConsent(granted) {
+  try { localStorage.setItem('swilan_consent', granted ? 'granted' : 'denied'); } catch (e) {}
+  if (typeof gtag === 'function') {
+    const v = granted ? 'granted' : 'denied';
+    gtag('consent', 'update', {
+      ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v
+    });
+  }
+  document.body.classList.remove('consent-open');
+  const b = document.getElementById('consent-banner');
+  if (b) { b.classList.remove('show'); setTimeout(() => b.remove(), 350); }
+}
+
+function renderConsentBanner() {
+  let saved = null;
+  try { saved = localStorage.getItem('swilan_consent'); } catch (e) {}
+  if (saved === 'granted' || saved === 'denied') return;   // já decidiu
+
+  const el = document.createElement('div');
+  el.id = 'consent-banner';
+  el.setAttribute('role', 'dialog');
+  el.setAttribute('aria-label', t('ckTitulo'));
+  el.innerHTML = `
+    <p>${t('ckTexto')} <a href="${pageUrl('cookies.html')}">${t('ckLink')}</a></p>
+    <div class="consent-actions">
+      <button id="consent-reject" type="button">${t('ckRecusar')}</button>
+      <button id="consent-accept" type="button">${t('ckAceitar')}</button>
+    </div>`;
+  document.body.appendChild(el);
+  document.body.classList.add('consent-open');
+  // setTimeout (e não requestAnimationFrame): rAF não dispara em separadores
+  // em segundo plano, o que deixaria o banner invisível.
+  setTimeout(() => el.classList.add('show'), 60);
+  document.getElementById('consent-accept').addEventListener('click', () => setConsent(true));
+  document.getElementById('consent-reject').addEventListener('click', () => setConsent(false));
+}
+
 // ── i18n estático + links ─────────────────────────────────────────
 function applyI18n() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -292,6 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initImovelForm('swilan-site-' + page);
   applyI18n();
   applyLangLinks();
+  renderConsentBanner();
   if (document.getElementById('cards-home'))    renderCards('cards-home', 4);
   if (document.getElementById('cards-imoveis')) renderCards('cards-imoveis');
 });

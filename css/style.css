@@ -390,3 +390,42 @@ img { display: block; max-width: 100%; }
   /* cta final */
   .cta-final { padding: 3rem 1.25rem; }
 }
+
+/* ── BANNER DE CONSENTIMENTO (RGPD / Consent Mode v2) ───────── */
+#consent-banner {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 9995;
+  background: rgba(14,28,43,.97);
+  border-top: 1px solid rgba(190,159,98,.3);
+  backdrop-filter: blur(6px);
+  padding: 1.3rem 2rem;
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.6rem; flex-wrap: wrap;
+  transform: translateY(100%); transition: transform .35s ease;
+}
+#consent-banner.show { transform: translateY(0); }
+#consent-banner p {
+  color: rgba(247,243,236,.78);
+  font-size: .82rem; line-height: 1.6;
+  max-width: 640px; margin: 0;
+}
+#consent-banner a { color: var(--gold); text-decoration: underline; }
+#consent-banner .consent-actions { display: flex; gap: .7rem; flex-shrink: 0; }
+#consent-banner button {
+  font-family: 'Jost', sans-serif;
+  padding: .7rem 1.6rem; font-size: .72rem;
+  letter-spacing: .12em; text-transform: uppercase; font-weight: 500;
+  cursor: pointer; border: none; transition: opacity .2s;
+}
+#consent-banner button:hover { opacity: .82; }
+#consent-accept { background: var(--gold); color: var(--navy); }
+#consent-reject { background: transparent; color: var(--cream); border: 1px solid rgba(247,243,236,.35); }
+@media (max-width: 860px) {
+  #consent-banner { padding: 1.1rem 1.2rem; gap: 1rem; }
+  #consent-banner p { font-size: .78rem; }
+  #consent-banner .consent-actions { width: 100%; }
+  #consent-banner .consent-actions button { flex: 1; }
+}
+/* Enquanto o banner está visível, esconder a barra fixa e o botão flutuante
+   para não se sobreporem à escolha de consentimento. */
+body.consent-open #mobile-cta,
+body.consent-open #wa-float { display: none !important; }

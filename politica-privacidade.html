@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
+  <!-- Consent Mode v2 + Google tag (gtag.js) — Google Ads AW-18330422032 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Por omissão TUDO negado (RGPD/EEE). Só é libertado após consentimento.
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', wait_for_update:500
+    });
+    try{
+      if (localStorage.getItem('swilan_consent') === 'granted') {
+        gtag('consent','update',{
+          ad_storage:'granted', ad_user_data:'granted',
+          ad_personalization:'granted', analytics_storage:'granted'
+        });
+      }
+    }catch(e){}
+    gtag('js', new Date());
+    gtag('config','AW-18330422032');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18330422032"></script>
+
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="theme-color" content="#0E1C2B"/>
@@ -39,7 +61,7 @@
     <p>O tratamento assenta no consentimento explícito do titular (Art. 6.º, n.º 1, al. a) do RGPD), manifestado no envio do formulário com a aceitação desta política.</p>
 
     <h2>5. Destinatários</h2>
-    <p>Os dados podem ser transmitidos a ferramentas de automação (Make, n8n) e armazenamento (Supabase, Notion) utilizadas internamente para gestão de contactos. Não são partilhados com terceiros para fins comerciais alheios ao portfólio.</p>
+    <p>Os dados podem ser transmitidos a ferramentas de automação (Make) e de gestão de contactos (HubSpot) utilizadas internamente. Mediante consentimento, são ainda recolhidos dados de medição publicitária pela Google Ireland Limited (etiqueta Google), sem qualquer partilha de dados identificáveis do formulário. Não são partilhados com terceiros para fins comerciais alheios ao portfólio.</p>
 
     <h2>6. Conservação</h2>
     <p>Os dados são conservados pelo período necessário para resposta ao pedido e eventual processo de compra, não excedendo 24 meses após o último contacto, salvo obrigação legal.</p>
@@ -51,7 +73,8 @@
     <p>O titular pode apresentar reclamação à autoridade de controlo competente, a Comissão Nacional de Proteção de Dados (CNPD): <a href="https://www.cnpd.pt" target="_blank" rel="noopener">www.cnpd.pt</a>.</p>
 
     <h2>9. Cookies</h2>
-    <p>Este site utiliza apenas cookies técnicos/essenciais, necessários ao seu funcionamento. Não utiliza cookies de rastreamento nem publicidade de terceiros. Para estatísticas de utilização é usado o GoatCounter, uma ferramenta de análise sem cookies que não recolhe dados pessoais identificáveis nem rastreia visitantes entre sites. Caso venham a ser utilizadas ferramentas de análise, publicidade ou remarketing, esta política será atualizada e, quando exigido, será solicitado consentimento prévio. Ver a <a href="cookies.html">Política de Cookies</a>.</p>
+    <p>Este site utiliza cookies técnicos/essenciais, necessários ao seu funcionamento e ao registo da sua escolha de consentimento. Para estatísticas de utilização é usado o GoatCounter, uma ferramenta de análise sem cookies que não recolhe dados pessoais identificáveis nem rastreia visitantes entre sites.</p>
+    <p>Mediante o seu consentimento explícito, é ainda utilizada a etiqueta Google (Google Ads) para medição da eficácia das campanhas publicitárias. Estes cookies estão bloqueados por predefinição e só são ativados após aceitação no banner de consentimento (Google Consent Mode v2); a recusa não afeta a navegação e o consentimento pode ser retirado a qualquer momento. Este tratamento assenta no consentimento (Art. 6.º, n.º 1, al. a) do RGPD) e pode implicar transferência de dados para fora do EEE ao abrigo das cláusulas contratuais-tipo da Comissão Europeia. Ver a <a href="cookies.html">Política de Cookies</a>.</p>
   </div>
 
   <footer id="footer"></footer>
