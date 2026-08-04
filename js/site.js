@@ -300,6 +300,23 @@ function renderConsentBanner() {
 }
 
 // ── i18n estático + links ─────────────────────────────────────────
+// Cartao da fundadora acima de cada formulario (padrao do setor: rosto antes do pedido de dados)
+function renderFounderCard() {
+  document.querySelectorAll('form#contact-form').forEach(form => {
+    if (form.previousElementSibling && form.previousElementSibling.classList.contains('founder-card')) return;
+    const card = document.createElement('div');
+    card.className = 'founder-card';
+    card.innerHTML = `
+      <img src="assets/proprietaria.jpg" data-i18n-alt="sbPropAlt" alt="" width="72" height="72" loading="lazy" decoding="async"/>
+      <div>
+        <p class="founder-card-nome" data-i18n="sbPropAssin">Swilan Cuénod</p>
+        <p class="founder-card-cargo" data-i18n="sbPropCargo">Fundadora</p>
+      </div>
+      <a href="${waUrl()}" class="founder-card-wa" target="_blank" rel="noopener">${WA_SVG}<span data-i18n="navWa">Falar no WhatsApp</span></a>`;
+    form.parentNode.insertBefore(card, form);
+  });
+}
+
 function applyI18n() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const val = t(el.getAttribute('data-i18n'));
@@ -308,6 +325,10 @@ function applyI18n() {
   document.querySelectorAll('[data-ph]').forEach(el => {
     const val = t(el.getAttribute('data-ph'));
     if (val) el.placeholder = val;
+  });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    const val = t(el.getAttribute('data-i18n-alt'));
+    if (val) el.alt = val;
   });
 }
 
@@ -328,6 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   window.__reveal_refresh = initReveal;
   initImovelForm('swilan-site-' + page);
+  renderFounderCard();
   applyI18n();
   applyLangLinks();
   renderConsentBanner();

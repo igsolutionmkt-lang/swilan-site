@@ -178,6 +178,28 @@ img { display: block; max-width: 100%; }
 .about-split img { width: 100%; height: 420px; object-fit: cover; }
 .about-split .text h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: 1.2rem; }
 .about-split .text p { font-size: .9rem; line-height: 1.8; opacity: .75; margin-bottom: 1rem; }
+.founder-card { display: flex; align-items: center; gap: 1rem; padding-bottom: 1.4rem; margin-bottom: 1.8rem; border-bottom: 1px solid rgba(190,159,98,.25); text-align: left; }
+.founder-card img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; object-position: 50% 22%; flex-shrink: 0; }
+.founder-card-nome { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; line-height: 1.2; }
+.founder-card-cargo { font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-top: .25rem; }
+.founder-card-wa {
+  display: inline-flex; align-items: center; gap: .5rem; margin-left: auto;
+  border: 1px solid var(--gold); color: var(--gold); background: transparent;
+  padding: .6rem 1.1rem; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
+  font-weight: 500; white-space: nowrap; transition: background .2s, color .2s;
+}
+.founder-card-wa:hover { background: var(--gold); color: var(--navy); }
+@media (max-width: 560px) {
+  .founder-card { flex-wrap: wrap; }
+  .founder-card-wa { margin-left: 0; width: 100%; justify-content: center; }
+}
+.section--dark .founder-card-nome { color: var(--cream); }
+
+.about-split--retrato { grid-template-columns: 440px 1fr; gap: 4rem; }
+.about-split--retrato img { height: auto; aspect-ratio: 4 / 5; }
+.about-split--retrato .text h2 { font-size: clamp(1.7rem, 2.9vw, 2.3rem); line-height: 1.28; }
+.about-split--retrato .text .founder-nome { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; opacity: 1; margin-bottom: 0; }
+@media (max-width: 900px) { .about-split--retrato { grid-template-columns: 1fr; gap: 2.2rem; max-width: 440px; margin: 0 auto; } }
 .zonas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
 .zona { padding: 2rem; }
 .zona h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); margin-bottom: .5rem; }
