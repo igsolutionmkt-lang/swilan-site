@@ -338,6 +338,21 @@ function applyLangLinks() {
   pages.forEach(page => document.querySelectorAll(`[href="${page}"]`).forEach(a => { a.href = pageUrl(page); }));
 }
 
+// ── Conversão Google Ads no clique do WhatsApp ────────────────────
+// Delegado no documento: apanha os botões de WhatsApp de todas as
+// páginas (hero, formulário, float, barra mobile) sem os alterar.
+function initWaConversion() {
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[href*="wa.me/"]');
+    if (!a || typeof gtag !== 'function') return;
+    gtag('event', 'conversion', {
+      send_to: 'AW-18330422032/NHKFCOTU-d0cEJCW0KRE',
+      value: 1.0,
+      currency: 'EUR'
+    });
+  });
+}
+
 // ── Init ──────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   const page = document.body.dataset.page || 'index';
@@ -345,6 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderNav(page);
   renderFooter();
   renderWaFloat();
+  initWaConversion();
   renderMobileCta();
   initReveal();
   window.__reveal_refresh = initReveal;
